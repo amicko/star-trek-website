@@ -33065,7 +33065,8 @@ module.exports = React.createClass({
 						"a",
 						{ href: "" },
 						"Home"
-					)
+					),
+					React.createElement("hr", null)
 				),
 				React.createElement(
 					"li",
@@ -33074,7 +33075,8 @@ module.exports = React.createClass({
 						"a",
 						{ href: "" },
 						"Media"
-					)
+					),
+					React.createElement("hr", null)
 				),
 				React.createElement(
 					"li",
@@ -33083,7 +33085,8 @@ module.exports = React.createClass({
 						"a",
 						{ href: "" },
 						"Lore"
-					)
+					),
+					React.createElement("hr", null)
 				),
 				React.createElement(
 					"li",
@@ -33092,7 +33095,8 @@ module.exports = React.createClass({
 						"a",
 						{ href: "" },
 						"Games"
-					)
+					),
+					React.createElement("hr", null)
 				)
 			)
 		);

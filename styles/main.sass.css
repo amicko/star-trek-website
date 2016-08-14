@@ -1,83 +1,70 @@
-body {
-  margin: 0;
+.NavContainer {
   display: none; }
-  body .NavContainer {
+
+@media screen and (min-width: 450px) {
+  .NavContainer {
+    display: block;
     background-image: radial-gradient(ellipse, #ffffff 0%, #B7B8BA 65%, #737C92 85%);
     font-family: 'Orbitron', sans-serif;
     padding-top: 1px; }
-    body .NavContainer img {
+    .NavContainer img {
       display: none; }
-    body .NavContainer h1 {
-      margin-top: 1.75em;
+    .NavContainer h1 {
+      margin: 0;
+      margin-top: 1em;
       font-size: 5em;
       text-align: center; }
-    body .NavContainer #navList {
+    .NavContainer #navList {
       padding: 0;
-      padding-top: 3em;
-      padding-bottom: 0.8em;
+      padding-top: 1em;
       margin: 0;
       text-align: center; }
-      body .NavContainer #navList li {
+      .NavContainer #navList li {
         display: inline-block;
         list-style-type: none;
         padding: 10px;
-        padding-bottom: 0.5em;
-        margin-right: 1em; }
-        body .NavContainer #navList li a {
+        padding-bottom: 0;
+        margin-right: 1em;
+        height: 45px;
+        overflow: hidden; }
+        .NavContainer #navList li a {
           color: #061D51;
           text-decoration: none;
-          font-size: 3em; }
-        body .NavContainer #navList li a:hover {
-          color: black;
-          text-decoration: none;
-          font-size: 3em;
-          animation-name: navHover;
-          animation-duration: 0.5s; }
-
-@keyframes navHover {
-  from {
-    color: #061D51; }
-  to {
-    color: black; } }
-
-@media screen and (min-width: 450px) {
-  body {
-    margin: 0;
-    display: block; }
-    body .NavContainer {
-      background-image: radial-gradient(ellipse, #ffffff 0%, #B7B8BA 65%, #737C92 85%);
-      font-family: 'Orbitron', sans-serif;
-      padding-top: 1px; }
-      body .NavContainer img {
-        display: none; }
-      body .NavContainer h1 {
-        margin-top: 1.75em;
-        font-size: 5em;
-        text-align: center; }
-      body .NavContainer #navList {
-        padding: 0;
-        padding-top: 3em;
-        padding-bottom: 0.8em;
-        margin: 0;
-        text-align: center; }
-        body .NavContainer #navList li {
-          display: inline-block;
-          list-style-type: none;
-          padding: 10px;
-          padding-bottom: 0.5em;
-          margin-right: 1em; }
-          body .NavContainer #navList li a {
-            color: #061D51;
-            text-decoration: none;
-            font-size: 3em; }
-          body .NavContainer #navList li a:hover {
-            color: black;
-            text-decoration: none;
-            font-size: 3em;
-            animation-name: navHover;
-            animation-duration: 0.5s; }
+          font-size: 2em;
+          padding: 0;
+          margin: 0; }
+        .NavContainer #navList li hr {
+          background-color: #2E4172;
+          height: 5px;
+          border-radius: 5px; }
+      .NavContainer #navList li:hover a {
+        color: black;
+        animation-name: navHover;
+        animation-duration: 0.5s; }
   @keyframes navHover {
     from {
       color: #061D51; }
     to {
-      color: black; } } }
+      color: black; } }
+      .NavContainer #navList li:hover hr {
+        background-color: #000000;
+        animation-name: navUnderBar;
+        animation-duration: 0.55s;
+        position: relative;
+        top: -11px; }
+  @keyframes navUnderBar {
+    from {
+      position: relative;
+      top: 0; }
+    to {
+      position: relative;
+      top: -11px; } } }
+
+@media screen and (min-width: 1000px) {
+  .NavContainer {
+    width: 1000px;
+    margin: 0 auto; } }
+
+body {
+  margin: 0;
+  background-color: #000E2F; }

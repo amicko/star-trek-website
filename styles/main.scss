@@ -1,2 +1,7 @@
-@import 'homepage'
+@import 'navBar',
+		'homepage';
 
+body {
+	margin: 0;
+	background-color: #000E2F;
+}

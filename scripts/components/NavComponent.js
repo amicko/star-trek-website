@@ -7,10 +7,10 @@ module.exports = React.createClass({
 				<img src="images/STAR TREK.png"/>
 				<h1>Star Trek Website</h1>
 				<ul id="navList">
-					<li><a href="">Home</a></li>
-					<li><a href="">Media</a></li>
-					<li><a href="">Lore</a></li>
-					<li><a href="">Games</a></li>
+					<li><a href="">Home</a><hr/></li>
+					<li><a href="">Media</a><hr/></li>
+					<li><a href="">Lore</a><hr/></li>
+					<li><a href="">Games</a><hr/></li>
 				</ul>
 			</div>
 		)
