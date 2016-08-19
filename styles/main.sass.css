@@ -5,7 +5,7 @@
   .NavContainer {
     display: block;
     background-image: radial-gradient(ellipse, #ffffff 0%, #B7B8BA 65%, #737C92 85%);
-    font-family: 'Orbitron', sans-serif;
+    font-family: 'Orbitron', sans-serif, bold;
     padding-top: 1px; }
     .NavContainer img {
       display: none; }
@@ -62,6 +62,34 @@
 
 @media screen and (min-width: 1000px) {
   .NavContainer {
+    width: 1000px;
+    margin: 0 auto; } }
+
+.homeContainer {
+  display: none;
+  background-image: radial-gradient(ellipse, #ffffff 0%, #B7B8BA 65%, #737C92 85%); }
+
+@media screen and (min-width: 450px) {
+  .homeContainer {
+    display: block;
+    background-image: none; }
+    .homeContainer section {
+      padding: 1px;
+      margin: 1em 0; }
+      .homeContainer section h2 {
+        text-align: center;
+        margin-top: 1em; }
+      .homeContainer section p {
+        margin: 1em 10% 2em 10%; }
+    .homeContainer #homeIntroduction {
+      background-image: radial-gradient(ellipse, #ffffff 0%, #B7B8BA 65%, #737C92 85%); }
+    .homeContainer #homeFranchiseHistory {
+      background-image: radial-gradient(ellipse, #ffffff 0%, #B7B8BA 65%, #737C92 85%); }
+    .homeContainer #homePersonalHistory {
+      background-image: radial-gradient(ellipse, #ffffff 0%, #B7B8BA 65%, #737C92 85%); } }
+
+@media screen and (min-width: 1000px) {
+  .homeContainer {
     width: 1000px;
     margin: 0 auto; } }
 

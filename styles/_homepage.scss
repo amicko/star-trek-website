@@ -1,0 +1,140 @@
+.homeContainer {
+	display: none;
+	background-image: radial-gradient(ellipse, #ffffff 0%, #B7B8BA 65%, #737C92 85%);
+
+	#homeIntroduction {
+
+
+		h2 {
+
+		}
+
+		p {
+
+		}
+	}
+
+	#homeFranchiseHistory {
+
+
+		h2 {
+
+		}
+
+		p {
+
+		}
+	}
+
+	#homePersonalHistory {
+
+
+		h2 {
+
+		}
+
+		p {
+
+		}
+	}
+}
+
+@media screen and (min-width: 450px) {
+	.homeContainer {
+		display: block;
+		background-image: none;
+
+		section {
+			padding: 1px;
+			margin: 1em 0;
+
+			h2 {
+				text-align: center;
+				margin-top: 1em;
+			}
+
+			p {
+				margin: 1em 10% 2em 10%;
+			}
+		}
+
+		#homeIntroduction {
+			background-image: radial-gradient(ellipse, #ffffff 0%, #B7B8BA 65%, #737C92 85%);
+
+			h2 {
+
+			}
+
+			p {
+
+			}
+		}
+
+		#homeFranchiseHistory {
+			background-image: radial-gradient(ellipse, #ffffff 0%, #B7B8BA 65%, #737C92 85%);
+
+			h2 {
+
+			}
+
+			p {
+
+			}
+		}
+
+		#homePersonalHistory {
+			background-image: radial-gradient(ellipse, #ffffff 0%, #B7B8BA 65%, #737C92 85%);
+
+			h2 {
+
+			}
+
+			p {
+
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 1000px) {
+	.homeContainer {
+		width: 1000px;
+		margin: 0 auto;
+
+		#homeIntroduction {
+
+
+			h2 {
+
+			}
+
+			p {
+
+			}
+		}
+
+		#homeFranchiseHistory {
+
+
+			h2 {
+
+			}
+
+			p {
+
+			}
+		}
+
+		#homePersonalHistory {
+
+
+			h2 {
+
+			}
+
+			p {
+
+			}
+		}
+	}
+}
