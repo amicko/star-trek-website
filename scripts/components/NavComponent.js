@@ -5,7 +5,8 @@ module.exports = React.createClass({
 		return (
 			<div className="NavContainer">
 				<img src="images/STAR TREK.png"/>
-				<h1>Star Trek Website</h1>
+				<h1>Memory Aaron</h1>
+				<h2>A Begginer Trekkie's Guide</h2>
 				<ul id="navList">
 					<li><a href="">Home</a><hr/></li>
 					<li><a href="">Media</a><hr/></li>
