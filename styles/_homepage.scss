@@ -43,6 +43,7 @@
 	.homeContainer {
 		display: block;
 		background-image: none;
+		padding-bottom: 1px;
 
 		section {
 			padding: 1px;
@@ -98,6 +99,11 @@
 
 			}
 
+			h3 {
+				text-align: center;
+				// margin-left: 1em;
+			}
+
 			p {
 
 			}
@@ -112,6 +118,27 @@
 
 			p {
 
+			}
+		}
+
+		#homeFooter {
+			background-color: #737C92;
+			// height: 20px;
+			margin-bottom: 1em;
+
+			ul {
+				text-align: center;
+				list-style-type: none;
+
+				li {
+					display: inline-block;
+					margin: 0.5em;
+				}
+
+				li:not(:last-child) {
+					border-right: 1px solid black;
+					padding-right: 1em;
+				}
 			}
 		}
 	}

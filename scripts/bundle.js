@@ -33142,9 +33142,19 @@ module.exports = React.createClass({
 					"Syndication and the Silver Screen"
 				),
 				React.createElement(
+					"p",
+					null,
+					"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc tellus turpis, vehicula eu placerat nec, venenatis sed massa. Ut ultrices ante ut lectus euismod porttitor. Duis ut condimentum est. Morbi non condimentum tortor, eget sagittis sem. Pellentesque pulvinar pellentesque justo sit amet faucibus. Vivamus rhoncus elit ut leo ultricies, a sodales nisl mattis. In maximus dictum orci, sit amet consectetur tellus ullamcorper tempor. Quisque a libero at est sagittis fringilla. Fusce pharetra ipsum in augue aliquam, at vehicula felis consectetur."
+				),
+				React.createElement(
 					"h3",
 					null,
 					"The Next Generation of Star Trek Fans"
+				),
+				React.createElement(
+					"p",
+					null,
+					"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc tellus turpis, vehicula eu placerat nec, venenatis sed massa. Ut ultrices ante ut lectus euismod porttitor. Duis ut condimentum est. Morbi non condimentum tortor, eget sagittis sem. Pellentesque pulvinar pellentesque justo sit amet faucibus. Vivamus rhoncus elit ut leo ultricies, a sodales nisl mattis. In maximus dictum orci, sit amet consectetur tellus ullamcorper tempor. Quisque a libero at est sagittis fringilla. Fusce pharetra ipsum in augue aliquam, at vehicula felis consectetur."
 				),
 				React.createElement(
 					"h3",
@@ -33152,9 +33162,19 @@ module.exports = React.createClass({
 					"Star Trek Ventures Even Deeper Into Space and Into a Richer Universe"
 				),
 				React.createElement(
+					"p",
+					null,
+					"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc tellus turpis, vehicula eu placerat nec, venenatis sed massa. Ut ultrices ante ut lectus euismod porttitor. Duis ut condimentum est. Morbi non condimentum tortor, eget sagittis sem. Pellentesque pulvinar pellentesque justo sit amet faucibus. Vivamus rhoncus elit ut leo ultricies, a sodales nisl mattis. In maximus dictum orci, sit amet consectetur tellus ullamcorper tempor. Quisque a libero at est sagittis fringilla. Fusce pharetra ipsum in augue aliquam, at vehicula felis consectetur."
+				),
+				React.createElement(
 					"h3",
 					null,
 					"The Trek World Voyages Where No Trekkie Has Gone Before"
+				),
+				React.createElement(
+					"p",
+					null,
+					"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc tellus turpis, vehicula eu placerat nec, venenatis sed massa. Ut ultrices ante ut lectus euismod porttitor. Duis ut condimentum est. Morbi non condimentum tortor, eget sagittis sem. Pellentesque pulvinar pellentesque justo sit amet faucibus. Vivamus rhoncus elit ut leo ultricies, a sodales nisl mattis. In maximus dictum orci, sit amet consectetur tellus ullamcorper tempor. Quisque a libero at est sagittis fringilla. Fusce pharetra ipsum in augue aliquam, at vehicula felis consectetur."
 				),
 				React.createElement(
 					"h3",
@@ -33162,9 +33182,19 @@ module.exports = React.createClass({
 					"A Jump Back In Time"
 				),
 				React.createElement(
+					"p",
+					null,
+					"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc tellus turpis, vehicula eu placerat nec, venenatis sed massa. Ut ultrices ante ut lectus euismod porttitor. Duis ut condimentum est. Morbi non condimentum tortor, eget sagittis sem. Pellentesque pulvinar pellentesque justo sit amet faucibus. Vivamus rhoncus elit ut leo ultricies, a sodales nisl mattis. In maximus dictum orci, sit amet consectetur tellus ullamcorper tempor. Quisque a libero at est sagittis fringilla. Fusce pharetra ipsum in augue aliquam, at vehicula felis consectetur."
+				),
+				React.createElement(
 					"h3",
 					null,
 					"Not your Grandfather's Star Trek"
+				),
+				React.createElement(
+					"p",
+					null,
+					"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc tellus turpis, vehicula eu placerat nec, venenatis sed massa. Ut ultrices ante ut lectus euismod porttitor. Duis ut condimentum est. Morbi non condimentum tortor, eget sagittis sem. Pellentesque pulvinar pellentesque justo sit amet faucibus. Vivamus rhoncus elit ut leo ultricies, a sodales nisl mattis. In maximus dictum orci, sit amet consectetur tellus ullamcorper tempor. Quisque a libero at est sagittis fringilla. Fusce pharetra ipsum in augue aliquam, at vehicula felis consectetur."
 				)
 			),
 			React.createElement(
@@ -33185,12 +33215,63 @@ module.exports = React.createClass({
 					null,
 					"Pellentesque erat massa, placerat pulvinar eros et, consectetur dapibus justo. Fusce tempor tellus id nibh auctor pharetra. Pellentesque venenatis a tortor non congue. Cras libero lectus, accumsan blandit euismod et, accumsan id velit. Vestibulum massa tellus, rhoncus eget mattis sit amet, elementum non felis. Duis ac accumsan diam. Nulla ut dignissim magna. Suspendisse vel consequat dolor, a varius purus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Quisque pharetra libero id dignissim blandit. Fusce rutrum eros mauris, bibendum scelerisque velit molestie quis. In ut facilisis nisl."
 				)
+			),
+			React.createElement(
+				"footer",
+				{ id: "homeFooter" },
+				React.createElement(
+					"ul",
+					null,
+					React.createElement(
+						"li",
+						null,
+						"Footer Stuff"
+					),
+					React.createElement("vr", null),
+					React.createElement(
+						"li",
+						null,
+						"Footer Stuff"
+					),
+					React.createElement(
+						"li",
+						null,
+						"Footer Stuff"
+					),
+					React.createElement(
+						"li",
+						null,
+						"Footer Stuff"
+					)
+				)
 			)
 		);
 	}
 });
 
 },{"react":169}],172:[function(require,module,exports){
+"use strict";
+
+var React = require('react');
+
+module.exports = React.createClass({
+	displayName: "exports",
+
+	getInitialState: function getInitialState() {
+		return {
+			currentChoice: null
+		};
+	},
+	render: function render() {
+		return React.createElement(
+			"div",
+			{ className: "mediaContainer" },
+			"Media Page"
+		);
+	}
+});
+
+},{"react":169}],173:[function(require,module,exports){
 "use strict";
 
 var React = require('react');
@@ -33221,7 +33302,7 @@ module.exports = React.createClass({
 					null,
 					React.createElement(
 						"a",
-						{ href: "" },
+						{ href: "#" },
 						"Home"
 					),
 					React.createElement("hr", null)
@@ -33231,7 +33312,7 @@ module.exports = React.createClass({
 					null,
 					React.createElement(
 						"a",
-						{ href: "" },
+						{ href: "#/media" },
 						"Media"
 					),
 					React.createElement("hr", null)
@@ -33241,7 +33322,7 @@ module.exports = React.createClass({
 					null,
 					React.createElement(
 						"a",
-						{ href: "" },
+						{ href: "#" },
 						"Lore"
 					),
 					React.createElement("hr", null)
@@ -33251,7 +33332,7 @@ module.exports = React.createClass({
 					null,
 					React.createElement(
 						"a",
-						{ href: "" },
+						{ href: "#" },
 						"Games"
 					),
 					React.createElement("hr", null)
@@ -33261,7 +33342,7 @@ module.exports = React.createClass({
 	}
 });
 
-},{"react":169}],173:[function(require,module,exports){
+},{"react":169}],174:[function(require,module,exports){
 'use strict';
 
 var React = require('react');
@@ -33276,21 +33357,28 @@ var main = document.getElementById('main');
 
 var HomeComponent = require('./components/HomeComponent.js');
 var NavComponent = require('./components/NavComponent.js');
+var MediaComponent = require('./components/MediaComponent.js');
 
 var Router = Backbone.Router.extend({
 	routes: {
-		'': 'home'
+		'': 'home',
+		'#': 'home',
+		'media': 'media'
 	},
 	home: function home() {
 		ReactDOM.render(React.createElement(NavComponent, { router: this }), nav);
 		ReactDOM.render(React.createElement(HomeComponent, { router: this }), main);
+	},
+	media: function media() {
+		ReactDOM.render(React.createElement(NavComponent, { router: this }), nav);
+		ReactDOM.render(React.createElement(MediaComponent, { router: this }), main);
 	}
 });
 
 var r = new Router();
 Backbone.history.start();
 
-},{"./components/HomeComponent.js":171,"./components/NavComponent.js":172,"backbone":1,"jquery":28,"react":169,"react-dom":30}]},{},[173])
+},{"./components/HomeComponent.js":171,"./components/MediaComponent.js":172,"./components/NavComponent.js":173,"backbone":1,"jquery":28,"react":169,"react-dom":30}]},{},[174])
 
 
 //# sourceMappingURL=bundle.js.map

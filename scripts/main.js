@@ -10,14 +10,21 @@ var main = document.getElementById('main');
 
 var HomeComponent = require('./components/HomeComponent.js');
 var NavComponent = require('./components/NavComponent.js');
+var MediaComponent = require('./components/MediaComponent.js');
 
 var Router = Backbone.Router.extend({
 	routes: {
-		'' : 'home'
+		'' : 'home',
+		'#' : 'home',
+		'media' : 'media'
 	},
 	home: function() {
 		ReactDOM.render(<NavComponent router={this}/>, nav)
 		ReactDOM.render(<HomeComponent router={this}/>, main)
+	},
+	media: function() {
+		ReactDOM.render(<NavComponent router={this}/>, nav)
+		ReactDOM.render(<MediaComponent router={this}/>, main)
 	}
 });
 
