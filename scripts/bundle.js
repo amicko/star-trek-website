@@ -33263,10 +33263,47 @@ module.exports = React.createClass({
 		};
 	},
 	render: function render() {
+		var currentChoice = null;
+		// if(!this.state.currentChoice) {
+		// 	currentChoice = 'Media Page'
+		// }
+		// else {
+		// 	currentChoice = this.state.currentChoice
+		// }
 		return React.createElement(
 			"div",
 			{ className: "mediaContainer" },
-			"Media Page"
+			React.createElement(
+				"div",
+				{ className: "mediaIntro" },
+				React.createElement(
+					"h2",
+					null,
+					"Media"
+				),
+				React.createElement(
+					"p",
+					null,
+					"Welcome to the media page! On this page you will find my recommended top picks from the many Star Trek movies and Star Trek TV series. These pages are designed to guide you through some of Star Trek's very best media options without requiring too much understanding of the Star Trek universe."
+				)
+			),
+			React.createElement("a", { id: "mediaMovieIcon", href: "#/media/mov" }),
+			React.createElement(
+				"div",
+				{ id: "tvBigContainer" },
+				React.createElement(
+					"div",
+					{ className: "tvSmallContainer" },
+					React.createElement("a", { id: "mediaOriginalSeriesIcon", href: "#/media/tos" }),
+					React.createElement("a", { id: "mediaTNGSeriesIcon", href: "#/media/tng" })
+				),
+				React.createElement(
+					"div",
+					{ className: "tvSmallContainer" },
+					React.createElement("a", { id: "mediaDS9SeriesIcon", href: "#/media/ds9" }),
+					React.createElement("a", { id: "mediaVoyagerSeriesIcon", href: "#/media/voy" })
+				)
+			)
 		);
 	}
 });
@@ -33349,8 +33386,6 @@ var React = require('react');
 var ReactDOM = require('react-dom');
 var Backbone = require('backbone');
 var $ = require('jquery');
-
-console.log('Rawr!');
 
 var nav = document.getElementById('nav');
 var main = document.getElementById('main');

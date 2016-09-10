@@ -3,8 +3,6 @@ var ReactDOM = require('react-dom');
 var Backbone = require('backbone');
 var $ = require('jquery');
 
-console.log('Rawr!');
-
 var nav = document.getElementById('nav');
 var main = document.getElementById('main');
 
