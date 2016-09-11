@@ -33250,6 +33250,45 @@ module.exports = React.createClass({
 });
 
 },{"react":169}],172:[function(require,module,exports){
+'use strict';
+
+var React = require('react');
+
+module.exports = React.createClass({
+	displayName: 'exports',
+
+	getInitialState: function getInitialState() {
+		return {
+			mediaMovies: ['This', 'is', 'the', 'movies', 'page'],
+			mediaTOS: ['This', 'is', 'the', 'TOS', 'page'],
+			mediaTNG: ['This', 'is', 'the', 'TNG', 'page'],
+			mediaDS9: ['This', 'is', 'the', 'DS9', 'page'],
+			mediaVOY: ['This', 'is', 'the', 'VOY', 'page']
+		};
+	},
+	render: function render() {
+		console.log(this.props.mediaCategory);
+		var shownList = [];
+		if (this.props.mediaCategory == 'mov') {
+			shownList = this.state.mediaMovies[0] + ' ' + this.state.mediaMovies[1] + ' ' + this.state.mediaMovies[2] + ' ' + this.state.mediaMovies[3] + ' ' + this.state.mediaMovies[4];
+		} else if (this.props.mediaCategory == 'tos') {
+			shownList = this.state.mediaTOS[0] + ' ' + this.state.mediaTOS[1] + ' ' + this.state.mediaTOS[2] + ' ' + this.state.mediaTOS[3] + ' ' + this.state.mediaTOS[4];
+		} else if (this.props.mediaCategory == 'tng') {
+			shownList = this.state.mediaTNG[0] + ' ' + this.state.mediaTNG[1] + ' ' + this.state.mediaTNG[2] + ' ' + this.state.mediaTNG[3] + ' ' + this.state.mediaTNG[4];
+		} else if (this.props.mediaCategory == 'ds9') {
+			shownList = this.state.mediaDS9[0] + ' ' + this.state.mediaDS9[1] + ' ' + this.state.mediaDS9[2] + ' ' + this.state.mediaDS9[3] + ' ' + this.state.mediaDS9[4];
+		} else if (this.props.mediaCategory == 'voy') {
+			shownList = this.state.mediaVOY[0] + ' ' + this.state.mediaVOY[1] + ' ' + this.state.mediaVOY[2] + ' ' + this.state.mediaVOY[3] + ' ' + this.state.mediaVOY[4];
+		}
+		return React.createElement(
+			'div',
+			{ className: 'mediaCategoryContainer' },
+			shownList
+		);
+	}
+});
+
+},{"react":169}],173:[function(require,module,exports){
 "use strict";
 
 var React = require('react');
@@ -33308,7 +33347,7 @@ module.exports = React.createClass({
 	}
 });
 
-},{"react":169}],173:[function(require,module,exports){
+},{"react":169}],174:[function(require,module,exports){
 "use strict";
 
 var React = require('react');
@@ -33379,7 +33418,7 @@ module.exports = React.createClass({
 	}
 });
 
-},{"react":169}],174:[function(require,module,exports){
+},{"react":169}],175:[function(require,module,exports){
 'use strict';
 
 var React = require('react');
@@ -33393,12 +33432,14 @@ var main = document.getElementById('main');
 var HomeComponent = require('./components/HomeComponent.js');
 var NavComponent = require('./components/NavComponent.js');
 var MediaComponent = require('./components/MediaComponent.js');
+var MediaCategoryComponent = require('./components/MediaCategoryComponent.js');
 
 var Router = Backbone.Router.extend({
 	routes: {
 		'': 'home',
 		'#': 'home',
-		'media': 'media'
+		'media': 'media',
+		'media/:mediaCategory': 'mediaCategory'
 	},
 	home: function home() {
 		ReactDOM.render(React.createElement(NavComponent, { router: this }), nav);
@@ -33407,13 +33448,17 @@ var Router = Backbone.Router.extend({
 	media: function media() {
 		ReactDOM.render(React.createElement(NavComponent, { router: this }), nav);
 		ReactDOM.render(React.createElement(MediaComponent, { router: this }), main);
+	},
+	mediaCategory: function mediaCategory(_mediaCategory) {
+		ReactDOM.render(React.createElement(NavComponent, { router: this }), nav);
+		ReactDOM.render(React.createElement(MediaCategoryComponent, { mediaCategory: _mediaCategory, router: this }), main);
 	}
 });
 
 var r = new Router();
 Backbone.history.start();
 
-},{"./components/HomeComponent.js":171,"./components/MediaComponent.js":172,"./components/NavComponent.js":173,"backbone":1,"jquery":28,"react":169,"react-dom":30}]},{},[174])
+},{"./components/HomeComponent.js":171,"./components/MediaCategoryComponent.js":172,"./components/MediaComponent.js":173,"./components/NavComponent.js":174,"backbone":1,"jquery":28,"react":169,"react-dom":30}]},{},[175])
 
 
 //# sourceMappingURL=bundle.js.map
