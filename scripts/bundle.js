@@ -33259,26 +33259,380 @@ module.exports = React.createClass({
 
 	getInitialState: function getInitialState() {
 		return {
-			mediaMovies: ['This', 'is', 'the', 'movies', 'page'],
-			mediaTOS: ['This', 'is', 'the', 'TOS', 'page'],
-			mediaTNG: ['This', 'is', 'the', 'TNG', 'page'],
-			mediaDS9: ['This', 'is', 'the', 'DS9', 'page'],
-			mediaVOY: ['This', 'is', 'the', 'VOY', 'page']
+			mediaMovies: [{
+				movieName: 'Movie One',
+				movieSummary: 'Words words words words',
+				movieReason: 'More words words words'
+			}, {
+				movieName: 'Movie Two',
+				movieSummary: 'Words words words words',
+				movieReason: 'More words words words'
+			}, {
+				movieName: 'Movie Three',
+				movieSummary: 'Words words words words',
+				movieReason: 'More words words words'
+			}, {
+				movieName: 'Movie Four',
+				movieSummary: 'Words words words words',
+				movieReason: 'More words words words'
+			}, {
+				movieName: 'Movie Five',
+				movieSummary: 'Words words words words',
+				movieReason: 'More words words words'
+			}],
+			mediaTOS: [{
+				episodeName: 'Episode One',
+				episodeSummary: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur viverra massa diam, et ornare orci mollis at. Pellentesque ligula tortor, blandit et metus ut, bibendum pulvinar libero. Ut condimentum dapibus magna ut varius. Quisque mollis tempor quam sit amet cursus. Fusce eget malesuada lacus, non semper neque. Cras porttitor et velit non pharetra. Ut malesuada tincidunt pretium. Fusce lorem purus, faucibus id turpis a, aliquam ornare metus.',
+				episodeReason: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur viverra massa diam, et ornare orci mollis at. Pellentesque ligula tortor, blandit et metus ut, bibendum pulvinar libero. Ut condimentum dapibus magna ut varius. Quisque mollis tempor quam sit amet cursus. Fusce eget malesuada lacus, non semper neque. Cras porttitor et velit non pharetra. Ut malesuada tincidunt pretium. Fusce lorem purus, faucibus id turpis a, aliquam ornare metus.'
+			}, {
+				episodeName: 'Episode Two',
+				episodeSummary: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur viverra massa diam, et ornare orci mollis at. Pellentesque ligula tortor, blandit et metus ut, bibendum pulvinar libero. Ut condimentum dapibus magna ut varius. Quisque mollis tempor quam sit amet cursus. Fusce eget malesuada lacus, non semper neque. Cras porttitor et velit non pharetra. Ut malesuada tincidunt pretium. Fusce lorem purus, faucibus id turpis a, aliquam ornare metus.',
+				episodeReason: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur viverra massa diam, et ornare orci mollis at. Pellentesque ligula tortor, blandit et metus ut, bibendum pulvinar libero. Ut condimentum dapibus magna ut varius. Quisque mollis tempor quam sit amet cursus. Fusce eget malesuada lacus, non semper neque. Cras porttitor et velit non pharetra. Ut malesuada tincidunt pretium. Fusce lorem purus, faucibus id turpis a, aliquam ornare metus.'
+			}, {
+				episodeName: 'Episode Three',
+				episodeSummary: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur viverra massa diam, et ornare orci mollis at. Pellentesque ligula tortor, blandit et metus ut, bibendum pulvinar libero. Ut condimentum dapibus magna ut varius. Quisque mollis tempor quam sit amet cursus. Fusce eget malesuada lacus, non semper neque. Cras porttitor et velit non pharetra. Ut malesuada tincidunt pretium. Fusce lorem purus, faucibus id turpis a, aliquam ornare metus.',
+				episodeReason: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur viverra massa diam, et ornare orci mollis at. Pellentesque ligula tortor, blandit et metus ut, bibendum pulvinar libero. Ut condimentum dapibus magna ut varius. Quisque mollis tempor quam sit amet cursus. Fusce eget malesuada lacus, non semper neque. Cras porttitor et velit non pharetra. Ut malesuada tincidunt pretium. Fusce lorem purus, faucibus id turpis a, aliquam ornare metus.'
+			}, {
+				episodeName: 'Episode Four',
+				episodeSummary: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur viverra massa diam, et ornare orci mollis at. Pellentesque ligula tortor, blandit et metus ut, bibendum pulvinar libero. Ut condimentum dapibus magna ut varius. Quisque mollis tempor quam sit amet cursus. Fusce eget malesuada lacus, non semper neque. Cras porttitor et velit non pharetra. Ut malesuada tincidunt pretium. Fusce lorem purus, faucibus id turpis a, aliquam ornare metus.',
+				episodeReason: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur viverra massa diam, et ornare orci mollis at. Pellentesque ligula tortor, blandit et metus ut, bibendum pulvinar libero. Ut condimentum dapibus magna ut varius. Quisque mollis tempor quam sit amet cursus. Fusce eget malesuada lacus, non semper neque. Cras porttitor et velit non pharetra. Ut malesuada tincidunt pretium. Fusce lorem purus, faucibus id turpis a, aliquam ornare metus.'
+			}, {
+				episodeName: 'Episode Five',
+				episodeSummary: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur viverra massa diam, et ornare orci mollis at. Pellentesque ligula tortor, blandit et metus ut, bibendum pulvinar libero. Ut condimentum dapibus magna ut varius. Quisque mollis tempor quam sit amet cursus. Fusce eget malesuada lacus, non semper neque. Cras porttitor et velit non pharetra. Ut malesuada tincidunt pretium. Fusce lorem purus, faucibus id turpis a, aliquam ornare metus.',
+				episodeReason: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur viverra massa diam, et ornare orci mollis at. Pellentesque ligula tortor, blandit et metus ut, bibendum pulvinar libero. Ut condimentum dapibus magna ut varius. Quisque mollis tempor quam sit amet cursus. Fusce eget malesuada lacus, non semper neque. Cras porttitor et velit non pharetra. Ut malesuada tincidunt pretium. Fusce lorem purus, faucibus id turpis a, aliquam ornare metus.'
+			}, {
+				episodeName: 'Episode Six',
+				episodeSummary: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur viverra massa diam, et ornare orci mollis at. Pellentesque ligula tortor, blandit et metus ut, bibendum pulvinar libero. Ut condimentum dapibus magna ut varius. Quisque mollis tempor quam sit amet cursus. Fusce eget malesuada lacus, non semper neque. Cras porttitor et velit non pharetra. Ut malesuada tincidunt pretium. Fusce lorem purus, faucibus id turpis a, aliquam ornare metus.',
+				episodeReason: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur viverra massa diam, et ornare orci mollis at. Pellentesque ligula tortor, blandit et metus ut, bibendum pulvinar libero. Ut condimentum dapibus magna ut varius. Quisque mollis tempor quam sit amet cursus. Fusce eget malesuada lacus, non semper neque. Cras porttitor et velit non pharetra. Ut malesuada tincidunt pretium. Fusce lorem purus, faucibus id turpis a, aliquam ornare metus.'
+			}, {
+				episodeName: 'Episode Seven',
+				episodeSummary: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur viverra massa diam, et ornare orci mollis at. Pellentesque ligula tortor, blandit et metus ut, bibendum pulvinar libero. Ut condimentum dapibus magna ut varius. Quisque mollis tempor quam sit amet cursus. Fusce eget malesuada lacus, non semper neque. Cras porttitor et velit non pharetra. Ut malesuada tincidunt pretium. Fusce lorem purus, faucibus id turpis a, aliquam ornare metus.',
+				episodeReason: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur viverra massa diam, et ornare orci mollis at. Pellentesque ligula tortor, blandit et metus ut, bibendum pulvinar libero. Ut condimentum dapibus magna ut varius. Quisque mollis tempor quam sit amet cursus. Fusce eget malesuada lacus, non semper neque. Cras porttitor et velit non pharetra. Ut malesuada tincidunt pretium. Fusce lorem purus, faucibus id turpis a, aliquam ornare metus.'
+			}, {
+				episodeName: 'Episode Eight',
+				episodeSummary: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur viverra massa diam, et ornare orci mollis at. Pellentesque ligula tortor, blandit et metus ut, bibendum pulvinar libero. Ut condimentum dapibus magna ut varius. Quisque mollis tempor quam sit amet cursus. Fusce eget malesuada lacus, non semper neque. Cras porttitor et velit non pharetra. Ut malesuada tincidunt pretium. Fusce lorem purus, faucibus id turpis a, aliquam ornare metus.',
+				episodeReason: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur viverra massa diam, et ornare orci mollis at. Pellentesque ligula tortor, blandit et metus ut, bibendum pulvinar libero. Ut condimentum dapibus magna ut varius. Quisque mollis tempor quam sit amet cursus. Fusce eget malesuada lacus, non semper neque. Cras porttitor et velit non pharetra. Ut malesuada tincidunt pretium. Fusce lorem purus, faucibus id turpis a, aliquam ornare metus.'
+			}, {
+				episodeName: 'Episode Nine',
+				episodeSummary: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur viverra massa diam, et ornare orci mollis at. Pellentesque ligula tortor, blandit et metus ut, bibendum pulvinar libero. Ut condimentum dapibus magna ut varius. Quisque mollis tempor quam sit amet cursus. Fusce eget malesuada lacus, non semper neque. Cras porttitor et velit non pharetra. Ut malesuada tincidunt pretium. Fusce lorem purus, faucibus id turpis a, aliquam ornare metus.',
+				episodeReason: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur viverra massa diam, et ornare orci mollis at. Pellentesque ligula tortor, blandit et metus ut, bibendum pulvinar libero. Ut condimentum dapibus magna ut varius. Quisque mollis tempor quam sit amet cursus. Fusce eget malesuada lacus, non semper neque. Cras porttitor et velit non pharetra. Ut malesuada tincidunt pretium. Fusce lorem purus, faucibus id turpis a, aliquam ornare metus.'
+			}, {
+				episodeName: 'Episode Ten',
+				episodeSummary: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur viverra massa diam, et ornare orci mollis at. Pellentesque ligula tortor, blandit et metus ut, bibendum pulvinar libero. Ut condimentum dapibus magna ut varius. Quisque mollis tempor quam sit amet cursus. Fusce eget malesuada lacus, non semper neque. Cras porttitor et velit non pharetra. Ut malesuada tincidunt pretium. Fusce lorem purus, faucibus id turpis a, aliquam ornare metus.',
+				episodeReason: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur viverra massa diam, et ornare orci mollis at. Pellentesque ligula tortor, blandit et metus ut, bibendum pulvinar libero. Ut condimentum dapibus magna ut varius. Quisque mollis tempor quam sit amet cursus. Fusce eget malesuada lacus, non semper neque. Cras porttitor et velit non pharetra. Ut malesuada tincidunt pretium. Fusce lorem purus, faucibus id turpis a, aliquam ornare metus.'
+			}],
+			mediaTNG: [{
+				episodeName: 'Episode One',
+				episodeSummary: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur viverra massa diam, et ornare orci mollis at. Pellentesque ligula tortor, blandit et metus ut, bibendum pulvinar libero. Ut condimentum dapibus magna ut varius. Quisque mollis tempor quam sit amet cursus. Fusce eget malesuada lacus, non semper neque. Cras porttitor et velit non pharetra. Ut malesuada tincidunt pretium. Fusce lorem purus, faucibus id turpis a, aliquam ornare metus.',
+				episodeReason: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur viverra massa diam, et ornare orci mollis at. Pellentesque ligula tortor, blandit et metus ut, bibendum pulvinar libero. Ut condimentum dapibus magna ut varius. Quisque mollis tempor quam sit amet cursus. Fusce eget malesuada lacus, non semper neque. Cras porttitor et velit non pharetra. Ut malesuada tincidunt pretium. Fusce lorem purus, faucibus id turpis a, aliquam ornare metus.'
+			}, {
+				episodeName: 'Episode Two',
+				episodeSummary: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur viverra massa diam, et ornare orci mollis at. Pellentesque ligula tortor, blandit et metus ut, bibendum pulvinar libero. Ut condimentum dapibus magna ut varius. Quisque mollis tempor quam sit amet cursus. Fusce eget malesuada lacus, non semper neque. Cras porttitor et velit non pharetra. Ut malesuada tincidunt pretium. Fusce lorem purus, faucibus id turpis a, aliquam ornare metus.',
+				episodeReason: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur viverra massa diam, et ornare orci mollis at. Pellentesque ligula tortor, blandit et metus ut, bibendum pulvinar libero. Ut condimentum dapibus magna ut varius. Quisque mollis tempor quam sit amet cursus. Fusce eget malesuada lacus, non semper neque. Cras porttitor et velit non pharetra. Ut malesuada tincidunt pretium. Fusce lorem purus, faucibus id turpis a, aliquam ornare metus.'
+			}, {
+				episodeName: 'Episode Three',
+				episodeSummary: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur viverra massa diam, et ornare orci mollis at. Pellentesque ligula tortor, blandit et metus ut, bibendum pulvinar libero. Ut condimentum dapibus magna ut varius. Quisque mollis tempor quam sit amet cursus. Fusce eget malesuada lacus, non semper neque. Cras porttitor et velit non pharetra. Ut malesuada tincidunt pretium. Fusce lorem purus, faucibus id turpis a, aliquam ornare metus.',
+				episodeReason: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur viverra massa diam, et ornare orci mollis at. Pellentesque ligula tortor, blandit et metus ut, bibendum pulvinar libero. Ut condimentum dapibus magna ut varius. Quisque mollis tempor quam sit amet cursus. Fusce eget malesuada lacus, non semper neque. Cras porttitor et velit non pharetra. Ut malesuada tincidunt pretium. Fusce lorem purus, faucibus id turpis a, aliquam ornare metus.'
+			}, {
+				episodeName: 'Episode Four',
+				episodeSummary: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur viverra massa diam, et ornare orci mollis at. Pellentesque ligula tortor, blandit et metus ut, bibendum pulvinar libero. Ut condimentum dapibus magna ut varius. Quisque mollis tempor quam sit amet cursus. Fusce eget malesuada lacus, non semper neque. Cras porttitor et velit non pharetra. Ut malesuada tincidunt pretium. Fusce lorem purus, faucibus id turpis a, aliquam ornare metus.',
+				episodeReason: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur viverra massa diam, et ornare orci mollis at. Pellentesque ligula tortor, blandit et metus ut, bibendum pulvinar libero. Ut condimentum dapibus magna ut varius. Quisque mollis tempor quam sit amet cursus. Fusce eget malesuada lacus, non semper neque. Cras porttitor et velit non pharetra. Ut malesuada tincidunt pretium. Fusce lorem purus, faucibus id turpis a, aliquam ornare metus.'
+			}, {
+				episodeName: 'Episode Five',
+				episodeSummary: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur viverra massa diam, et ornare orci mollis at. Pellentesque ligula tortor, blandit et metus ut, bibendum pulvinar libero. Ut condimentum dapibus magna ut varius. Quisque mollis tempor quam sit amet cursus. Fusce eget malesuada lacus, non semper neque. Cras porttitor et velit non pharetra. Ut malesuada tincidunt pretium. Fusce lorem purus, faucibus id turpis a, aliquam ornare metus.',
+				episodeReason: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur viverra massa diam, et ornare orci mollis at. Pellentesque ligula tortor, blandit et metus ut, bibendum pulvinar libero. Ut condimentum dapibus magna ut varius. Quisque mollis tempor quam sit amet cursus. Fusce eget malesuada lacus, non semper neque. Cras porttitor et velit non pharetra. Ut malesuada tincidunt pretium. Fusce lorem purus, faucibus id turpis a, aliquam ornare metus.'
+			}, {
+				episodeName: 'Episode Six',
+				episodeSummary: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur viverra massa diam, et ornare orci mollis at. Pellentesque ligula tortor, blandit et metus ut, bibendum pulvinar libero. Ut condimentum dapibus magna ut varius. Quisque mollis tempor quam sit amet cursus. Fusce eget malesuada lacus, non semper neque. Cras porttitor et velit non pharetra. Ut malesuada tincidunt pretium. Fusce lorem purus, faucibus id turpis a, aliquam ornare metus.',
+				episodeReason: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur viverra massa diam, et ornare orci mollis at. Pellentesque ligula tortor, blandit et metus ut, bibendum pulvinar libero. Ut condimentum dapibus magna ut varius. Quisque mollis tempor quam sit amet cursus. Fusce eget malesuada lacus, non semper neque. Cras porttitor et velit non pharetra. Ut malesuada tincidunt pretium. Fusce lorem purus, faucibus id turpis a, aliquam ornare metus.'
+			}, {
+				episodeName: 'Episode Seven',
+				episodeSummary: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur viverra massa diam, et ornare orci mollis at. Pellentesque ligula tortor, blandit et metus ut, bibendum pulvinar libero. Ut condimentum dapibus magna ut varius. Quisque mollis tempor quam sit amet cursus. Fusce eget malesuada lacus, non semper neque. Cras porttitor et velit non pharetra. Ut malesuada tincidunt pretium. Fusce lorem purus, faucibus id turpis a, aliquam ornare metus.',
+				episodeReason: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur viverra massa diam, et ornare orci mollis at. Pellentesque ligula tortor, blandit et metus ut, bibendum pulvinar libero. Ut condimentum dapibus magna ut varius. Quisque mollis tempor quam sit amet cursus. Fusce eget malesuada lacus, non semper neque. Cras porttitor et velit non pharetra. Ut malesuada tincidunt pretium. Fusce lorem purus, faucibus id turpis a, aliquam ornare metus.'
+			}, {
+				episodeName: 'Episode Eight',
+				episodeSummary: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur viverra massa diam, et ornare orci mollis at. Pellentesque ligula tortor, blandit et metus ut, bibendum pulvinar libero. Ut condimentum dapibus magna ut varius. Quisque mollis tempor quam sit amet cursus. Fusce eget malesuada lacus, non semper neque. Cras porttitor et velit non pharetra. Ut malesuada tincidunt pretium. Fusce lorem purus, faucibus id turpis a, aliquam ornare metus.',
+				episodeReason: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur viverra massa diam, et ornare orci mollis at. Pellentesque ligula tortor, blandit et metus ut, bibendum pulvinar libero. Ut condimentum dapibus magna ut varius. Quisque mollis tempor quam sit amet cursus. Fusce eget malesuada lacus, non semper neque. Cras porttitor et velit non pharetra. Ut malesuada tincidunt pretium. Fusce lorem purus, faucibus id turpis a, aliquam ornare metus.'
+			}, {
+				episodeName: 'Episode Nine',
+				episodeSummary: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur viverra massa diam, et ornare orci mollis at. Pellentesque ligula tortor, blandit et metus ut, bibendum pulvinar libero. Ut condimentum dapibus magna ut varius. Quisque mollis tempor quam sit amet cursus. Fusce eget malesuada lacus, non semper neque. Cras porttitor et velit non pharetra. Ut malesuada tincidunt pretium. Fusce lorem purus, faucibus id turpis a, aliquam ornare metus.',
+				episodeReason: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur viverra massa diam, et ornare orci mollis at. Pellentesque ligula tortor, blandit et metus ut, bibendum pulvinar libero. Ut condimentum dapibus magna ut varius. Quisque mollis tempor quam sit amet cursus. Fusce eget malesuada lacus, non semper neque. Cras porttitor et velit non pharetra. Ut malesuada tincidunt pretium. Fusce lorem purus, faucibus id turpis a, aliquam ornare metus.'
+			}, {
+				episodeName: 'Episode Ten',
+				episodeSummary: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur viverra massa diam, et ornare orci mollis at. Pellentesque ligula tortor, blandit et metus ut, bibendum pulvinar libero. Ut condimentum dapibus magna ut varius. Quisque mollis tempor quam sit amet cursus. Fusce eget malesuada lacus, non semper neque. Cras porttitor et velit non pharetra. Ut malesuada tincidunt pretium. Fusce lorem purus, faucibus id turpis a, aliquam ornare metus.',
+				episodeReason: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur viverra massa diam, et ornare orci mollis at. Pellentesque ligula tortor, blandit et metus ut, bibendum pulvinar libero. Ut condimentum dapibus magna ut varius. Quisque mollis tempor quam sit amet cursus. Fusce eget malesuada lacus, non semper neque. Cras porttitor et velit non pharetra. Ut malesuada tincidunt pretium. Fusce lorem purus, faucibus id turpis a, aliquam ornare metus.'
+			}],
+			mediaDS9: [{
+				episodeName: 'Episode One',
+				episodeSummary: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur viverra massa diam, et ornare orci mollis at. Pellentesque ligula tortor, blandit et metus ut, bibendum pulvinar libero. Ut condimentum dapibus magna ut varius. Quisque mollis tempor quam sit amet cursus. Fusce eget malesuada lacus, non semper neque. Cras porttitor et velit non pharetra. Ut malesuada tincidunt pretium. Fusce lorem purus, faucibus id turpis a, aliquam ornare metus.',
+				episodeReason: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur viverra massa diam, et ornare orci mollis at. Pellentesque ligula tortor, blandit et metus ut, bibendum pulvinar libero. Ut condimentum dapibus magna ut varius. Quisque mollis tempor quam sit amet cursus. Fusce eget malesuada lacus, non semper neque. Cras porttitor et velit non pharetra. Ut malesuada tincidunt pretium. Fusce lorem purus, faucibus id turpis a, aliquam ornare metus.'
+			}, {
+				episodeName: 'Episode Two',
+				episodeSummary: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur viverra massa diam, et ornare orci mollis at. Pellentesque ligula tortor, blandit et metus ut, bibendum pulvinar libero. Ut condimentum dapibus magna ut varius. Quisque mollis tempor quam sit amet cursus. Fusce eget malesuada lacus, non semper neque. Cras porttitor et velit non pharetra. Ut malesuada tincidunt pretium. Fusce lorem purus, faucibus id turpis a, aliquam ornare metus.',
+				episodeReason: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur viverra massa diam, et ornare orci mollis at. Pellentesque ligula tortor, blandit et metus ut, bibendum pulvinar libero. Ut condimentum dapibus magna ut varius. Quisque mollis tempor quam sit amet cursus. Fusce eget malesuada lacus, non semper neque. Cras porttitor et velit non pharetra. Ut malesuada tincidunt pretium. Fusce lorem purus, faucibus id turpis a, aliquam ornare metus.'
+			}, {
+				episodeName: 'Episode Three',
+				episodeSummary: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur viverra massa diam, et ornare orci mollis at. Pellentesque ligula tortor, blandit et metus ut, bibendum pulvinar libero. Ut condimentum dapibus magna ut varius. Quisque mollis tempor quam sit amet cursus. Fusce eget malesuada lacus, non semper neque. Cras porttitor et velit non pharetra. Ut malesuada tincidunt pretium. Fusce lorem purus, faucibus id turpis a, aliquam ornare metus.',
+				episodeReason: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur viverra massa diam, et ornare orci mollis at. Pellentesque ligula tortor, blandit et metus ut, bibendum pulvinar libero. Ut condimentum dapibus magna ut varius. Quisque mollis tempor quam sit amet cursus. Fusce eget malesuada lacus, non semper neque. Cras porttitor et velit non pharetra. Ut malesuada tincidunt pretium. Fusce lorem purus, faucibus id turpis a, aliquam ornare metus.'
+			}, {
+				episodeName: 'Episode Four',
+				episodeSummary: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur viverra massa diam, et ornare orci mollis at. Pellentesque ligula tortor, blandit et metus ut, bibendum pulvinar libero. Ut condimentum dapibus magna ut varius. Quisque mollis tempor quam sit amet cursus. Fusce eget malesuada lacus, non semper neque. Cras porttitor et velit non pharetra. Ut malesuada tincidunt pretium. Fusce lorem purus, faucibus id turpis a, aliquam ornare metus.',
+				episodeReason: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur viverra massa diam, et ornare orci mollis at. Pellentesque ligula tortor, blandit et metus ut, bibendum pulvinar libero. Ut condimentum dapibus magna ut varius. Quisque mollis tempor quam sit amet cursus. Fusce eget malesuada lacus, non semper neque. Cras porttitor et velit non pharetra. Ut malesuada tincidunt pretium. Fusce lorem purus, faucibus id turpis a, aliquam ornare metus.'
+			}, {
+				episodeName: 'Episode Five',
+				episodeSummary: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur viverra massa diam, et ornare orci mollis at. Pellentesque ligula tortor, blandit et metus ut, bibendum pulvinar libero. Ut condimentum dapibus magna ut varius. Quisque mollis tempor quam sit amet cursus. Fusce eget malesuada lacus, non semper neque. Cras porttitor et velit non pharetra. Ut malesuada tincidunt pretium. Fusce lorem purus, faucibus id turpis a, aliquam ornare metus.',
+				episodeReason: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur viverra massa diam, et ornare orci mollis at. Pellentesque ligula tortor, blandit et metus ut, bibendum pulvinar libero. Ut condimentum dapibus magna ut varius. Quisque mollis tempor quam sit amet cursus. Fusce eget malesuada lacus, non semper neque. Cras porttitor et velit non pharetra. Ut malesuada tincidunt pretium. Fusce lorem purus, faucibus id turpis a, aliquam ornare metus.'
+			}, {
+				episodeName: 'Episode Six',
+				episodeSummary: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur viverra massa diam, et ornare orci mollis at. Pellentesque ligula tortor, blandit et metus ut, bibendum pulvinar libero. Ut condimentum dapibus magna ut varius. Quisque mollis tempor quam sit amet cursus. Fusce eget malesuada lacus, non semper neque. Cras porttitor et velit non pharetra. Ut malesuada tincidunt pretium. Fusce lorem purus, faucibus id turpis a, aliquam ornare metus.',
+				episodeReason: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur viverra massa diam, et ornare orci mollis at. Pellentesque ligula tortor, blandit et metus ut, bibendum pulvinar libero. Ut condimentum dapibus magna ut varius. Quisque mollis tempor quam sit amet cursus. Fusce eget malesuada lacus, non semper neque. Cras porttitor et velit non pharetra. Ut malesuada tincidunt pretium. Fusce lorem purus, faucibus id turpis a, aliquam ornare metus.'
+			}, {
+				episodeName: 'Episode Seven',
+				episodeSummary: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur viverra massa diam, et ornare orci mollis at. Pellentesque ligula tortor, blandit et metus ut, bibendum pulvinar libero. Ut condimentum dapibus magna ut varius. Quisque mollis tempor quam sit amet cursus. Fusce eget malesuada lacus, non semper neque. Cras porttitor et velit non pharetra. Ut malesuada tincidunt pretium. Fusce lorem purus, faucibus id turpis a, aliquam ornare metus.',
+				episodeReason: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur viverra massa diam, et ornare orci mollis at. Pellentesque ligula tortor, blandit et metus ut, bibendum pulvinar libero. Ut condimentum dapibus magna ut varius. Quisque mollis tempor quam sit amet cursus. Fusce eget malesuada lacus, non semper neque. Cras porttitor et velit non pharetra. Ut malesuada tincidunt pretium. Fusce lorem purus, faucibus id turpis a, aliquam ornare metus.'
+			}, {
+				episodeName: 'Episode Eight',
+				episodeSummary: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur viverra massa diam, et ornare orci mollis at. Pellentesque ligula tortor, blandit et metus ut, bibendum pulvinar libero. Ut condimentum dapibus magna ut varius. Quisque mollis tempor quam sit amet cursus. Fusce eget malesuada lacus, non semper neque. Cras porttitor et velit non pharetra. Ut malesuada tincidunt pretium. Fusce lorem purus, faucibus id turpis a, aliquam ornare metus.',
+				episodeReason: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur viverra massa diam, et ornare orci mollis at. Pellentesque ligula tortor, blandit et metus ut, bibendum pulvinar libero. Ut condimentum dapibus magna ut varius. Quisque mollis tempor quam sit amet cursus. Fusce eget malesuada lacus, non semper neque. Cras porttitor et velit non pharetra. Ut malesuada tincidunt pretium. Fusce lorem purus, faucibus id turpis a, aliquam ornare metus.'
+			}, {
+				episodeName: 'Episode Nine',
+				episodeSummary: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur viverra massa diam, et ornare orci mollis at. Pellentesque ligula tortor, blandit et metus ut, bibendum pulvinar libero. Ut condimentum dapibus magna ut varius. Quisque mollis tempor quam sit amet cursus. Fusce eget malesuada lacus, non semper neque. Cras porttitor et velit non pharetra. Ut malesuada tincidunt pretium. Fusce lorem purus, faucibus id turpis a, aliquam ornare metus.',
+				episodeReason: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur viverra massa diam, et ornare orci mollis at. Pellentesque ligula tortor, blandit et metus ut, bibendum pulvinar libero. Ut condimentum dapibus magna ut varius. Quisque mollis tempor quam sit amet cursus. Fusce eget malesuada lacus, non semper neque. Cras porttitor et velit non pharetra. Ut malesuada tincidunt pretium. Fusce lorem purus, faucibus id turpis a, aliquam ornare metus.'
+			}, {
+				episodeName: 'Episode Ten',
+				episodeSummary: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur viverra massa diam, et ornare orci mollis at. Pellentesque ligula tortor, blandit et metus ut, bibendum pulvinar libero. Ut condimentum dapibus magna ut varius. Quisque mollis tempor quam sit amet cursus. Fusce eget malesuada lacus, non semper neque. Cras porttitor et velit non pharetra. Ut malesuada tincidunt pretium. Fusce lorem purus, faucibus id turpis a, aliquam ornare metus.',
+				episodeReason: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur viverra massa diam, et ornare orci mollis at. Pellentesque ligula tortor, blandit et metus ut, bibendum pulvinar libero. Ut condimentum dapibus magna ut varius. Quisque mollis tempor quam sit amet cursus. Fusce eget malesuada lacus, non semper neque. Cras porttitor et velit non pharetra. Ut malesuada tincidunt pretium. Fusce lorem purus, faucibus id turpis a, aliquam ornare metus.'
+			}],
+			mediaVOY: [{
+				episodeName: 'Episode One',
+				episodeSummary: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur viverra massa diam, et ornare orci mollis at. Pellentesque ligula tortor, blandit et metus ut, bibendum pulvinar libero. Ut condimentum dapibus magna ut varius. Quisque mollis tempor quam sit amet cursus. Fusce eget malesuada lacus, non semper neque. Cras porttitor et velit non pharetra. Ut malesuada tincidunt pretium. Fusce lorem purus, faucibus id turpis a, aliquam ornare metus.',
+				episodeReason: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur viverra massa diam, et ornare orci mollis at. Pellentesque ligula tortor, blandit et metus ut, bibendum pulvinar libero. Ut condimentum dapibus magna ut varius. Quisque mollis tempor quam sit amet cursus. Fusce eget malesuada lacus, non semper neque. Cras porttitor et velit non pharetra. Ut malesuada tincidunt pretium. Fusce lorem purus, faucibus id turpis a, aliquam ornare metus.'
+			}, {
+				episodeName: 'Episode Two',
+				episodeSummary: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur viverra massa diam, et ornare orci mollis at. Pellentesque ligula tortor, blandit et metus ut, bibendum pulvinar libero. Ut condimentum dapibus magna ut varius. Quisque mollis tempor quam sit amet cursus. Fusce eget malesuada lacus, non semper neque. Cras porttitor et velit non pharetra. Ut malesuada tincidunt pretium. Fusce lorem purus, faucibus id turpis a, aliquam ornare metus.',
+				episodeReason: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur viverra massa diam, et ornare orci mollis at. Pellentesque ligula tortor, blandit et metus ut, bibendum pulvinar libero. Ut condimentum dapibus magna ut varius. Quisque mollis tempor quam sit amet cursus. Fusce eget malesuada lacus, non semper neque. Cras porttitor et velit non pharetra. Ut malesuada tincidunt pretium. Fusce lorem purus, faucibus id turpis a, aliquam ornare metus.'
+			}, {
+				episodeName: 'Episode Three',
+				episodeSummary: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur viverra massa diam, et ornare orci mollis at. Pellentesque ligula tortor, blandit et metus ut, bibendum pulvinar libero. Ut condimentum dapibus magna ut varius. Quisque mollis tempor quam sit amet cursus. Fusce eget malesuada lacus, non semper neque. Cras porttitor et velit non pharetra. Ut malesuada tincidunt pretium. Fusce lorem purus, faucibus id turpis a, aliquam ornare metus.',
+				episodeReason: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur viverra massa diam, et ornare orci mollis at. Pellentesque ligula tortor, blandit et metus ut, bibendum pulvinar libero. Ut condimentum dapibus magna ut varius. Quisque mollis tempor quam sit amet cursus. Fusce eget malesuada lacus, non semper neque. Cras porttitor et velit non pharetra. Ut malesuada tincidunt pretium. Fusce lorem purus, faucibus id turpis a, aliquam ornare metus.'
+			}, {
+				episodeName: 'Episode Four',
+				episodeSummary: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur viverra massa diam, et ornare orci mollis at. Pellentesque ligula tortor, blandit et metus ut, bibendum pulvinar libero. Ut condimentum dapibus magna ut varius. Quisque mollis tempor quam sit amet cursus. Fusce eget malesuada lacus, non semper neque. Cras porttitor et velit non pharetra. Ut malesuada tincidunt pretium. Fusce lorem purus, faucibus id turpis a, aliquam ornare metus.',
+				episodeReason: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur viverra massa diam, et ornare orci mollis at. Pellentesque ligula tortor, blandit et metus ut, bibendum pulvinar libero. Ut condimentum dapibus magna ut varius. Quisque mollis tempor quam sit amet cursus. Fusce eget malesuada lacus, non semper neque. Cras porttitor et velit non pharetra. Ut malesuada tincidunt pretium. Fusce lorem purus, faucibus id turpis a, aliquam ornare metus.'
+			}, {
+				episodeName: 'Episode Five',
+				episodeSummary: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur viverra massa diam, et ornare orci mollis at. Pellentesque ligula tortor, blandit et metus ut, bibendum pulvinar libero. Ut condimentum dapibus magna ut varius. Quisque mollis tempor quam sit amet cursus. Fusce eget malesuada lacus, non semper neque. Cras porttitor et velit non pharetra. Ut malesuada tincidunt pretium. Fusce lorem purus, faucibus id turpis a, aliquam ornare metus.',
+				episodeReason: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur viverra massa diam, et ornare orci mollis at. Pellentesque ligula tortor, blandit et metus ut, bibendum pulvinar libero. Ut condimentum dapibus magna ut varius. Quisque mollis tempor quam sit amet cursus. Fusce eget malesuada lacus, non semper neque. Cras porttitor et velit non pharetra. Ut malesuada tincidunt pretium. Fusce lorem purus, faucibus id turpis a, aliquam ornare metus.'
+			}, {
+				episodeName: 'Episode Six',
+				episodeSummary: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur viverra massa diam, et ornare orci mollis at. Pellentesque ligula tortor, blandit et metus ut, bibendum pulvinar libero. Ut condimentum dapibus magna ut varius. Quisque mollis tempor quam sit amet cursus. Fusce eget malesuada lacus, non semper neque. Cras porttitor et velit non pharetra. Ut malesuada tincidunt pretium. Fusce lorem purus, faucibus id turpis a, aliquam ornare metus.',
+				episodeReason: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur viverra massa diam, et ornare orci mollis at. Pellentesque ligula tortor, blandit et metus ut, bibendum pulvinar libero. Ut condimentum dapibus magna ut varius. Quisque mollis tempor quam sit amet cursus. Fusce eget malesuada lacus, non semper neque. Cras porttitor et velit non pharetra. Ut malesuada tincidunt pretium. Fusce lorem purus, faucibus id turpis a, aliquam ornare metus.'
+			}, {
+				episodeName: 'Episode Seven',
+				episodeSummary: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur viverra massa diam, et ornare orci mollis at. Pellentesque ligula tortor, blandit et metus ut, bibendum pulvinar libero. Ut condimentum dapibus magna ut varius. Quisque mollis tempor quam sit amet cursus. Fusce eget malesuada lacus, non semper neque. Cras porttitor et velit non pharetra. Ut malesuada tincidunt pretium. Fusce lorem purus, faucibus id turpis a, aliquam ornare metus.',
+				episodeReason: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur viverra massa diam, et ornare orci mollis at. Pellentesque ligula tortor, blandit et metus ut, bibendum pulvinar libero. Ut condimentum dapibus magna ut varius. Quisque mollis tempor quam sit amet cursus. Fusce eget malesuada lacus, non semper neque. Cras porttitor et velit non pharetra. Ut malesuada tincidunt pretium. Fusce lorem purus, faucibus id turpis a, aliquam ornare metus.'
+			}, {
+				episodeName: 'Episode Eight',
+				episodeSummary: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur viverra massa diam, et ornare orci mollis at. Pellentesque ligula tortor, blandit et metus ut, bibendum pulvinar libero. Ut condimentum dapibus magna ut varius. Quisque mollis tempor quam sit amet cursus. Fusce eget malesuada lacus, non semper neque. Cras porttitor et velit non pharetra. Ut malesuada tincidunt pretium. Fusce lorem purus, faucibus id turpis a, aliquam ornare metus.',
+				episodeReason: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur viverra massa diam, et ornare orci mollis at. Pellentesque ligula tortor, blandit et metus ut, bibendum pulvinar libero. Ut condimentum dapibus magna ut varius. Quisque mollis tempor quam sit amet cursus. Fusce eget malesuada lacus, non semper neque. Cras porttitor et velit non pharetra. Ut malesuada tincidunt pretium. Fusce lorem purus, faucibus id turpis a, aliquam ornare metus.'
+			}, {
+				episodeName: 'Episode Nine',
+				episodeSummary: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur viverra massa diam, et ornare orci mollis at. Pellentesque ligula tortor, blandit et metus ut, bibendum pulvinar libero. Ut condimentum dapibus magna ut varius. Quisque mollis tempor quam sit amet cursus. Fusce eget malesuada lacus, non semper neque. Cras porttitor et velit non pharetra. Ut malesuada tincidunt pretium. Fusce lorem purus, faucibus id turpis a, aliquam ornare metus.',
+				episodeReason: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur viverra massa diam, et ornare orci mollis at. Pellentesque ligula tortor, blandit et metus ut, bibendum pulvinar libero. Ut condimentum dapibus magna ut varius. Quisque mollis tempor quam sit amet cursus. Fusce eget malesuada lacus, non semper neque. Cras porttitor et velit non pharetra. Ut malesuada tincidunt pretium. Fusce lorem purus, faucibus id turpis a, aliquam ornare metus.'
+			}, {
+				episodeName: 'Episode Ten',
+				episodeSummary: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur viverra massa diam, et ornare orci mollis at. Pellentesque ligula tortor, blandit et metus ut, bibendum pulvinar libero. Ut condimentum dapibus magna ut varius. Quisque mollis tempor quam sit amet cursus. Fusce eget malesuada lacus, non semper neque. Cras porttitor et velit non pharetra. Ut malesuada tincidunt pretium. Fusce lorem purus, faucibus id turpis a, aliquam ornare metus.',
+				episodeReason: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur viverra massa diam, et ornare orci mollis at. Pellentesque ligula tortor, blandit et metus ut, bibendum pulvinar libero. Ut condimentum dapibus magna ut varius. Quisque mollis tempor quam sit amet cursus. Fusce eget malesuada lacus, non semper neque. Cras porttitor et velit non pharetra. Ut malesuada tincidunt pretium. Fusce lorem purus, faucibus id turpis a, aliquam ornare metus.'
+			}]
 		};
 	},
 	render: function render() {
-		console.log(this.props.mediaCategory);
+		var movieMap = this.state.mediaMovies.map(function (movie, index) {
+			var newIndex = index + 1;
+			return React.createElement(
+				'div',
+				{ className: 'movieBox', key: index },
+				React.createElement(
+					'h3',
+					null,
+					newIndex,
+					'. ',
+					movie.movieName
+				),
+				React.createElement(
+					'h4',
+					null,
+					'Movie Summary'
+				),
+				React.createElement(
+					'p',
+					null,
+					movie.movieSummary
+				),
+				React.createElement(
+					'h4',
+					null,
+					'Reason I List It'
+				),
+				React.createElement(
+					'p',
+					null,
+					movie.movieReason
+				)
+			);
+		});
+
+		var TOSMap = this.state.mediaTOS.map(function (episode, index) {
+			var newIndex = index + 1;
+			return React.createElement(
+				'div',
+				{ className: 'episodeBox', key: index },
+				React.createElement(
+					'h3',
+					null,
+					newIndex,
+					'. ',
+					episode.episodeName
+				),
+				React.createElement(
+					'h4',
+					null,
+					'Episode Summary'
+				),
+				React.createElement(
+					'p',
+					null,
+					episode.episodeSummary
+				),
+				React.createElement(
+					'h4',
+					null,
+					'Reason I List It'
+				),
+				React.createElement(
+					'p',
+					null,
+					episode.episodeReason
+				)
+			);
+		});
+
+		var TNGMap = this.state.mediaTNG.map(function (episode, index) {
+			var newIndex = index + 1;
+			return React.createElement(
+				'div',
+				{ className: 'episodeBox', key: index },
+				React.createElement(
+					'h3',
+					null,
+					newIndex,
+					'. ',
+					episode.episodeName
+				),
+				React.createElement(
+					'h4',
+					null,
+					'Episode Summary'
+				),
+				React.createElement(
+					'p',
+					null,
+					episode.episodeSummary
+				),
+				React.createElement(
+					'h4',
+					null,
+					'Reason I List It'
+				),
+				React.createElement(
+					'p',
+					null,
+					episode.episodeReason
+				)
+			);
+		});
+
+		var DS9Map = this.state.mediaDS9.map(function (episode, index) {
+			var newIndex = index + 1;
+			return React.createElement(
+				'div',
+				{ className: 'episodeBox', key: index },
+				React.createElement(
+					'h3',
+					null,
+					newIndex,
+					'. ',
+					episode.episodeName
+				),
+				React.createElement(
+					'h4',
+					null,
+					'Episode Summary'
+				),
+				React.createElement(
+					'p',
+					null,
+					episode.episodeSummary
+				),
+				React.createElement(
+					'h4',
+					null,
+					'Reason I List It'
+				),
+				React.createElement(
+					'p',
+					null,
+					episode.episodeReason
+				)
+			);
+		});
+
+		var VOYMap = this.state.mediaVOY.map(function (episode, index) {
+			var newIndex = index + 1;
+			return React.createElement(
+				'div',
+				{ className: 'episodeBox', key: index },
+				React.createElement(
+					'h3',
+					null,
+					newIndex,
+					'. ',
+					episode.episodeName
+				),
+				React.createElement(
+					'h4',
+					null,
+					'Episode Summary'
+				),
+				React.createElement(
+					'p',
+					null,
+					episode.episodeSummary
+				),
+				React.createElement(
+					'h4',
+					null,
+					'Reason I List It'
+				),
+				React.createElement(
+					'p',
+					null,
+					episode.episodeReason
+				)
+			);
+		});
+
 		var shownList = [];
 		if (this.props.mediaCategory == 'mov') {
-			shownList = this.state.mediaMovies[0] + ' ' + this.state.mediaMovies[1] + ' ' + this.state.mediaMovies[2] + ' ' + this.state.mediaMovies[3] + ' ' + this.state.mediaMovies[4];
+			shownList = movieMap;
 		} else if (this.props.mediaCategory == 'tos') {
-			shownList = this.state.mediaTOS[0] + ' ' + this.state.mediaTOS[1] + ' ' + this.state.mediaTOS[2] + ' ' + this.state.mediaTOS[3] + ' ' + this.state.mediaTOS[4];
+			shownList = TOSMap;
 		} else if (this.props.mediaCategory == 'tng') {
-			shownList = this.state.mediaTNG[0] + ' ' + this.state.mediaTNG[1] + ' ' + this.state.mediaTNG[2] + ' ' + this.state.mediaTNG[3] + ' ' + this.state.mediaTNG[4];
+			shownList = TNGMap;
 		} else if (this.props.mediaCategory == 'ds9') {
-			shownList = this.state.mediaDS9[0] + ' ' + this.state.mediaDS9[1] + ' ' + this.state.mediaDS9[2] + ' ' + this.state.mediaDS9[3] + ' ' + this.state.mediaDS9[4];
+			shownList = DS9Map;
 		} else if (this.props.mediaCategory == 'voy') {
-			shownList = this.state.mediaVOY[0] + ' ' + this.state.mediaVOY[1] + ' ' + this.state.mediaVOY[2] + ' ' + this.state.mediaVOY[3] + ' ' + this.state.mediaVOY[4];
+			shownList = VOYMap;
 		}
 		return React.createElement(
 			'div',
