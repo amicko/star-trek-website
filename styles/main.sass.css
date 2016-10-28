@@ -1,5 +1,7 @@
 .NavContainer {
   display: none; }
+  .NavContainer #navList li:nth-child(3) {
+    display: none; }
 
 @media screen and (min-width: 450px) {
   .NavContainer {
@@ -189,6 +191,35 @@
         .mediaContainer #tvBigContainer .tvSmallContainer a {
           display: inline-block;
           margin: 1em; } }
+
+.mediaCategoryContainer {
+  display: none;
+  background-image: radial-gradient(ellipse, #ffffff 0%, #B7B8BA 65%, #737C92 85%); }
+  .mediaCategoryContainer .movieBox {
+    width: 90%;
+    margin: 1em auto;
+    padding: 1em 0; }
+    .mediaCategoryContainer .movieBox h4 {
+      margin-left: 1em; }
+    .mediaCategoryContainer .movieBox p {
+      margin-left: 1em; }
+  .mediaCategoryContainer .episodeBox {
+    width: 90%;
+    margin: 1em auto;
+    padding: 1em 0; }
+    .mediaCategoryContainer .episodeBox h4 {
+      margin-left: 1em; }
+    .mediaCategoryContainer .episodeBox p {
+      margin-left: 1em; }
+
+@media screen and (min-width: 450px) {
+  .mediaCategoryContainer {
+    display: block; } }
+
+@media screen and (min-width: 1000px) {
+  .mediaCategoryContainer {
+    width: 1000px;
+    margin: 0 auto; } }
 
 body {
   margin: 0;
