@@ -241,8 +241,24 @@ module.exports = React.createClass({
 		};
 	},
 	render: function() {
+		// let mediaCat = 'media' + this.props.mediaCategory.toUpperCase();
+		// console.log(typeof mediaCat);
+		// console.log(typeof this.props.mediaCategory);
+		let newIndex;
+		// let test = this.state.mediaCat.map((episode, index)) => {
+		// 	newIndex = index + 1
+		// 	return (
+		// 		<div className="episodeBox" key={index}>
+		// 			<h3>{newIndex}. {episode.episodeName}</h3>
+		// 			<h4>Episode Summary</h4>
+		// 			<p>{episode.episodeSummary}</p>
+		// 			<h4>Reason I List It</h4>
+		// 			<p>{episode.episodeReason}</p>
+		// 		</div>
+		// 	)
+		// }
 		var movieMap = this.state.mediaMovies.map((movie, index) => {
-			let newIndex = index + 1
+			newIndex = index + 1
 			return (
 				<div className="movieBox" key={index}>
 					<h3>{newIndex}. {movie.movieName}</h3>
@@ -255,7 +271,7 @@ module.exports = React.createClass({
 		})
 
 		var TOSMap = this.state.mediaTOS.map((episode, index) => {
-			let newIndex = index + 1
+			newIndex = index + 1
 			return (
 				<div className="episodeBox" key={index}>
 					<h3>{newIndex}. {episode.episodeName}</h3>
@@ -268,7 +284,7 @@ module.exports = React.createClass({
 		})
 
 		var TNGMap = this.state.mediaTNG.map((episode, index) => {
-			let newIndex = index + 1
+			newIndex = index + 1
 			return (
 				<div className="episodeBox" key={index}>
 					<h3>{newIndex}. {episode.episodeName}</h3>
@@ -281,7 +297,7 @@ module.exports = React.createClass({
 		})
 
 		var DS9Map = this.state.mediaDS9.map((episode, index) => {
-			let newIndex = index + 1
+			newIndex = index + 1
 			return (
 				<div className="episodeBox" key={index}>
 					<h3>{newIndex}. {episode.episodeName}</h3>
@@ -292,9 +308,8 @@ module.exports = React.createClass({
 				</div>
 			)
 		})
-
 		var VOYMap = this.state.mediaVOY.map((episode, index) => {
-			let newIndex = index + 1
+			newIndex = index + 1
 			return (
 				<div className="episodeBox" key={index}>
 					<h3>{newIndex}. {episode.episodeName}</h3>

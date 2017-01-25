@@ -1,4 +1,4 @@
-var React = require('react');
+const React = require('react');
 
 module.exports = React.createClass({
 	getInitialState: function() {
@@ -7,7 +7,7 @@ module.exports = React.createClass({
 		};
 	},
 	render: function() {
-		var currentChoice = null;
+		let currentChoice = null;
 		// if(!this.state.currentChoice) {
 		// 	currentChoice = 'Media Page'
 		// }

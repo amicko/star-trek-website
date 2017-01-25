@@ -1,17 +1,17 @@
-var React = require('react');
-var ReactDOM = require('react-dom');
-var Backbone = require('backbone');
-var $ = require('jquery');
+const React = require('react');
+const ReactDOM = require('react-dom');
+const Backbone = require('backbone');
+const $ = require('jquery');
 
-var nav = document.getElementById('nav');
-var main = document.getElementById('main');
+const nav = document.getElementById('nav');
+const main = document.getElementById('main');
 
-var HomeComponent = require('./components/HomeComponent.js');
-var NavComponent = require('./components/NavComponent.js');
-var MediaComponent = require('./components/MediaComponent.js');
-var MediaCategoryComponent = require('./components/MediaCategoryComponent.js');
+const HomeComponent = require('./components/HomeComponent.js');
+const NavComponent = require('./components/NavComponent.js');
+const MediaComponent = require('./components/MediaComponent.js');
+const MediaCategoryComponent = require('./components/MediaCategoryComponent.js');
 
-var Router = Backbone.Router.extend({
+const Router = Backbone.Router.extend({
 	routes: {
 		'' : 'home',
 		'#' : 'home',
@@ -32,5 +32,5 @@ var Router = Backbone.Router.extend({
 	}
 });
 
-var r = new Router();
+const r = new Router();
 Backbone.history.start();
