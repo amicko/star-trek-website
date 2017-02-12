@@ -33259,7 +33259,8 @@ module.exports = React.createClass({
 
 	getInitialState: function getInitialState() {
 		return {
-			mediaMovies: [{
+			currentCard: 0,
+			mediaMOV: [{
 				movieName: 'Movie One',
 				movieSummary: 'Words words words words',
 				movieReason: 'More words words words'
@@ -33447,23 +33448,10 @@ module.exports = React.createClass({
 		};
 	},
 	render: function render() {
-		// let mediaCat = 'media' + this.props.mediaCategory.toUpperCase();
-		// console.log(typeof mediaCat);
-		// console.log(typeof this.props.mediaCategory);
+		var _this = this;
+
 		var newIndex = undefined;
-		// let test = this.state.mediaCat.map((episode, index)) => {
-		// 	newIndex = index + 1
-		// 	return (
-		// 		<div className="episodeBox" key={index}>
-		// 			<h3>{newIndex}. {episode.episodeName}</h3>
-		// 			<h4>Episode Summary</h4>
-		// 			<p>{episode.episodeSummary}</p>
-		// 			<h4>Reason I List It</h4>
-		// 			<p>{episode.episodeReason}</p>
-		// 		</div>
-		// 	)
-		// }
-		var movieMap = this.state.mediaMovies.map(function (movie, index) {
+		var movieMap = this.state.mediaMOV.map(function (movie, index) {
 			newIndex = index + 1;
 			return React.createElement(
 				'div',
@@ -33649,11 +33637,54 @@ module.exports = React.createClass({
 		} else if (this.props.mediaCategory == 'voy') {
 			shownList = VOYMap;
 		}
+		var currentCard = this.state.currentCard;
 		return React.createElement(
 			'div',
 			{ className: 'mediaCategoryContainer' },
-			shownList
+			shownList[this.state.currentCard],
+			React.createElement(
+				'button',
+				{ onClick: function (e) {
+						_this.onPrev(e, currentCard);
+					} },
+				'Prev'
+			),
+			React.createElement(
+				'button',
+				{ onClick: function (e) {
+						_this.onNext(e, currentCard);
+					} },
+				'Next'
+			)
 		);
+	},
+	onNext: function onNext(e, currentCard) {
+		this.setState({
+			currentCard: currentCard + 1
+		});
+		if (this.props.mediaCategory === 'mov' && currentCard == this.state.mediaMOV.length - 1) {
+			this.setState({
+				currentCard: 0
+			});
+		} else if (this.props.mediaCategory != 'mov' && currentCard === 9) {
+			this.setState({
+				currentCard: 0
+			});
+		}
+	},
+	onPrev: function onPrev(e, currentCard) {
+		this.setState({
+			currentCard: currentCard - 1
+		});
+		if (this.props.mediaCategory === 'mov' && currentCard === 0) {
+			this.setState({
+				currentCard: 4
+			});
+		} else if (this.props.mediaCategory != 'mov' && currentCard === 0) {
+			this.setState({
+				currentCard: 9
+			});
+		}
 	}
 });
 
