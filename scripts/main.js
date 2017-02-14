@@ -10,13 +10,15 @@ const HomeComponent = require('./components/HomeComponent.js');
 const NavComponent = require('./components/NavComponent.js');
 const MediaComponent = require('./components/MediaComponent.js');
 const MediaCategoryComponent = require('./components/MediaCategoryComponent.js');
+const LoreCategoryComponent = require('./components/LoreCategoryComponent.js');
 
 const Router = Backbone.Router.extend({
 	routes: {
 		'' : 'home',
 		'#' : 'home',
 		'media' : 'media',
-		'media/:mediaCategory' : 'mediaCategory'
+		'media/:mediaCategory' : 'mediaCategory',
+		'lore' : 'lore'
 	},
 	home: function() {
 		ReactDOM.render(<NavComponent router={this}/>, nav)
@@ -29,6 +31,10 @@ const Router = Backbone.Router.extend({
 	mediaCategory: function(mediaCategory) {
 		ReactDOM.render(<NavComponent router={this}/>, nav)
 		ReactDOM.render(<MediaCategoryComponent mediaCategory={mediaCategory} router={this}/>, main)
+	},
+	lore: function() {
+		ReactDOM.render(<NavComponent router={this}/>, nav)
+		ReactDOM.render(<LoreCategoryComponent router={this}/>, main)
 	}
 });
 

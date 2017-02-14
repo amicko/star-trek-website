@@ -1,13 +1,13 @@
 const React = require('react');
 
 module.exports = React.createClass({
-	getInitialState: function() {
-		return {
-			currentChoice: null
-		};
-	},
+	// getInitialState: function() {
+	// 	return {
+	// 		currentChoice: null
+	// 	};
+	// },
 	render: function() {
-		let currentChoice = null;
+		// let currentChoice = null;
 		// if(!this.state.currentChoice) {
 		// 	currentChoice = 'Media Page'
 		// }

@@ -1,5 +1,5 @@
-.mediaCategoryContainer {
-	display: none;
+#mediaCategoryContainer {
+	// display: none;
 	background-image: radial-gradient(ellipse, #ffffff 0%, #B7B8BA 65%, #737C92 85%);
 
 	.movieBox {
@@ -36,6 +36,26 @@
 		p {
 			margin-left: 1em;
 		}
+	}
+
+	.testTranBoxStart {
+		background-color: #737C92;
+		width: 7em;
+		height: 7em;
+		margin: 0 auto;
+		transition-duration: 2s;
+		transition-timing-function: fade;
+		transform: rotate(0deg);
+	}
+
+	.testTranBoxFinish {
+		background-color: #737C92;
+		width: 7em;
+		height: 7em;
+		margin: 0 auto;
+		transition-duration: 2s;
+		transition-timing-function: fade;
+		transform: rotate(360deg);
 	}
 }
 

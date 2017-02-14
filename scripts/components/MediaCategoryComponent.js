@@ -3,7 +3,9 @@ var React = require('react');
 module.exports = React.createClass({
 	getInitialState: function() {
 		return {
+			testTran: 'testTranBoxStart',
 			currentCard: 0,
+			contBox: {},
 			mediaMOV: [
 				{
 					movieName: 'Movie One',
@@ -324,8 +326,45 @@ module.exports = React.createClass({
 			shownList = VOYMap
 		}
 		let currentCard = this.state.currentCard;
+
+
+		// let goToBed = null;
+		// let playTappedOut = null;
+
+		// let rawr =  new Promise(function(resolve, reject) {
+		// 	resolve(goToBed = true);
+		// })
+
+		// let sigh =  new Promise(function(resolve, reject) {
+		// 	resolve(playTappedOut = true);
+		// })
+
+		// let bedtime = function() {
+		// 	return new Promise(function(resolve, reject) {
+		// 	resolve('Go to bed and', goToBed = true);
+		// 	})
+		// }
+
+		// let gameTime = function(verdict) {
+		// 	return new Promise(function(resolve, reject) {
+		// 		resolve(verdict + ' play Tapped Out', playTappedOut = true)
+		// 	})
+		// }
+
+		// console.log(goToBed);
+		// console.log(playTappedOut);
+
+		// bedtime().then(function(result) {
+		// 	return gameTime(result);
+		// }).then(function(result) {
+		// 	console.log('Time to ' + result)
+		// })
+
+
+				// <div className={this.state.testTran}>Rawr</div>
+				
 		return (
-			<div className="mediaCategoryContainer">
+			<div style={this.state.contBox} id="mediaCategoryContainer">
 				{shownList[this.state.currentCard]}
 				<button onClick={(e) => {this.onPrev(e, currentCard)}}>Prev</button>
 				<button onClick={(e) => {this.onNext(e, currentCard)}}>Next</button>
@@ -334,8 +373,15 @@ module.exports = React.createClass({
 	},
 	onNext: function(e, currentCard) {
 		this.setState({
-			currentCard: currentCard + 1
+			currentCard: currentCard + 1,
+			contBox: {},
+			// testTran: 'testTranBoxFinish'
 		});
+		// if(this.state.testTran === 'testTranBoxFinish') {
+		// 	this.setState({
+		// 		testTran: 'testTranBoxStart'
+		// 	})
+		// }
 		if(this.props.mediaCategory === 'mov' && currentCard == (this.state.mediaMOV.length)-1) {
 			this.setState({
 				currentCard: 0
@@ -349,8 +395,14 @@ module.exports = React.createClass({
 	},
 	onPrev: function(e, currentCard) {
 		this.setState({
-			currentCard: currentCard - 1
+			currentCard: currentCard - 1,
+			// testTran: 'testTranBoxStart'
 		});
+		// if(this.state.testTran === 'testTranBoxStart') {
+		// 	this.setState({
+		// 		testTran: 'testTranBoxFinish'
+		// 	})
+		// }
 		if(this.props.mediaCategory === 'mov' && currentCard === 0) {
 			this.setState({
 				currentCard: 4

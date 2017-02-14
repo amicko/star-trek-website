@@ -1,6 +1,6 @@
 .NavContainer {
   display: none; }
-  .NavContainer #navList li:nth-child(3) {
+  .NavContainer #navList li:nth-child(4) {
     display: none; }
 
 @media screen and (min-width: 450px) {
@@ -192,25 +192,40 @@
           display: inline-block;
           margin: 1em; } }
 
-.mediaCategoryContainer {
-  display: none;
+#mediaCategoryContainer {
   background-image: radial-gradient(ellipse, #ffffff 0%, #B7B8BA 65%, #737C92 85%); }
-  .mediaCategoryContainer .movieBox {
+  #mediaCategoryContainer .movieBox {
     width: 90%;
     margin: 1em auto;
     padding: 1em 0; }
-    .mediaCategoryContainer .movieBox h4 {
+    #mediaCategoryContainer .movieBox h4 {
       margin-left: 1em; }
-    .mediaCategoryContainer .movieBox p {
+    #mediaCategoryContainer .movieBox p {
       margin-left: 1em; }
-  .mediaCategoryContainer .episodeBox {
+  #mediaCategoryContainer .episodeBox {
     width: 90%;
     margin: 1em auto;
     padding: 1em 0; }
-    .mediaCategoryContainer .episodeBox h4 {
+    #mediaCategoryContainer .episodeBox h4 {
       margin-left: 1em; }
-    .mediaCategoryContainer .episodeBox p {
+    #mediaCategoryContainer .episodeBox p {
       margin-left: 1em; }
+  #mediaCategoryContainer .testTranBoxStart {
+    background-color: #737C92;
+    width: 7em;
+    height: 7em;
+    margin: 0 auto;
+    transition-duration: 2s;
+    transition-timing-function: fade;
+    transform: rotate(0deg); }
+  #mediaCategoryContainer .testTranBoxFinish {
+    background-color: #737C92;
+    width: 7em;
+    height: 7em;
+    margin: 0 auto;
+    transition-duration: 2s;
+    transition-timing-function: fade;
+    transform: rotate(360deg); }
 
 @media screen and (min-width: 450px) {
   .mediaCategoryContainer {
@@ -220,6 +235,11 @@
   .mediaCategoryContainer {
     width: 1000px;
     margin: 0 auto; } }
+
+#loreContainer {
+  margin-top: 1em;
+  padding: 1em;
+  background-image: radial-gradient(ellipse, #ffffff 0%, #B7B8BA 65%, #737C92 85%); }
 
 body {
   margin: 0;

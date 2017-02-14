@@ -17,12 +17,12 @@ module.exports = React.createClass({
 						</li>
 						<li>
 							<h3>Moderate Trek Fans</h3>
-							<p>You will find here in-depth insight into some of the very best apsects of Star Trek, perhaps enlightening some fans who already loved Trek regarding parts they have yet to experience. You will also discover some hard to find material here(especiallywithin the Lore section).
+							<p>You will find here in-depth insight into some of the very best apsects of Star Trek, perhaps enlightening some fans who already loved Trek regarding parts they have yet to experience. You will also discover some hard to find material here(especially within the Lore section).
 							</p>
 						</li>
 						<li>
 							<h3>Hard-Core Trekkies</h3>
-							<p>If you think you are beyond anything this site has to offer, I invite you to test your Trekkie Technical Experience by playing the built-in browser game found in the games section, designed by a Trekkie, for Trekkies.
+							<p>If you think you are beyond anything this site has to offer, I invite you to test your Trekkie Technical Experience by playing the built-in browser game found in the games section, designed by a Trekkie, for Trekkies.(Still to come!)
 							</p>
 						</li>
 					</ul>

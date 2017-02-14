@@ -10,7 +10,7 @@ module.exports = React.createClass({
 				<ul id="navList">
 					<li><a href="#">Home</a><hr/></li>
 					<li><a href="#/media">Media</a><hr/></li>
-					<li><a href="#">Lore</a><hr/></li>
+					<li><a href="#/lore">Lore</a><hr/></li>
 					<li><a href="#">Games</a><hr/></li>
 				</ul>
 			</div>

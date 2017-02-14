@@ -33073,7 +33073,7 @@ module.exports = React.createClass({
 						React.createElement(
 							"p",
 							null,
-							"You will find here in-depth insight into some of the very best apsects of Star Trek, perhaps enlightening some fans who already loved Trek regarding parts they have yet to experience. You will also discover some hard to find material here(especiallywithin the Lore section)."
+							"You will find here in-depth insight into some of the very best apsects of Star Trek, perhaps enlightening some fans who already loved Trek regarding parts they have yet to experience. You will also discover some hard to find material here(especially within the Lore section)."
 						)
 					),
 					React.createElement(
@@ -33087,7 +33087,7 @@ module.exports = React.createClass({
 						React.createElement(
 							"p",
 							null,
-							"If you think you are beyond anything this site has to offer, I invite you to test your Trekkie Technical Experience by playing the built-in browser game found in the games section, designed by a Trekkie, for Trekkies."
+							"If you think you are beyond anything this site has to offer, I invite you to test your Trekkie Technical Experience by playing the built-in browser game found in the games section, designed by a Trekkie, for Trekkies.(Still to come!)"
 						)
 					)
 				),
@@ -33250,6 +33250,32 @@ module.exports = React.createClass({
 });
 
 },{"react":169}],172:[function(require,module,exports){
+"use strict";
+
+var React = require('react');
+
+module.exports = React.createClass({
+	displayName: "exports",
+
+	render: function render() {
+		return React.createElement(
+			"div",
+			{ id: "loreContainer" },
+			React.createElement(
+				"h2",
+				null,
+				"Welcome!"
+			),
+			React.createElement(
+				"p",
+				null,
+				"This is the future home of the lore page! You will find all the information a new-comer to Star Trek will need to learn about the various aspects of Star Trek. From the Galor-Class cruisers of the fascist-state Cardassians to the politically manipulative planetary history of the Romulan capitol of Romulus, you will find it all in one of the following categories."
+			)
+		);
+	}
+});
+
+},{"react":169}],173:[function(require,module,exports){
 'use strict';
 
 var React = require('react');
@@ -33259,7 +33285,9 @@ module.exports = React.createClass({
 
 	getInitialState: function getInitialState() {
 		return {
+			testTran: 'testTranBoxStart',
 			currentCard: 0,
+			contBox: {},
 			mediaMOV: [{
 				movieName: 'Movie One',
 				movieSummary: 'Words words words words',
@@ -33638,9 +33666,44 @@ module.exports = React.createClass({
 			shownList = VOYMap;
 		}
 		var currentCard = this.state.currentCard;
+
+		// let goToBed = null;
+		// let playTappedOut = null;
+
+		// let rawr =  new Promise(function(resolve, reject) {
+		// 	resolve(goToBed = true);
+		// })
+
+		// let sigh =  new Promise(function(resolve, reject) {
+		// 	resolve(playTappedOut = true);
+		// })
+
+		// let bedtime = function() {
+		// 	return new Promise(function(resolve, reject) {
+		// 	resolve('Go to bed and', goToBed = true);
+		// 	})
+		// }
+
+		// let gameTime = function(verdict) {
+		// 	return new Promise(function(resolve, reject) {
+		// 		resolve(verdict + ' play Tapped Out', playTappedOut = true)
+		// 	})
+		// }
+
+		// console.log(goToBed);
+		// console.log(playTappedOut);
+
+		// bedtime().then(function(result) {
+		// 	return gameTime(result);
+		// }).then(function(result) {
+		// 	console.log('Time to ' + result)
+		// })
+
+		// <div className={this.state.testTran}>Rawr</div>
+
 		return React.createElement(
 			'div',
-			{ className: 'mediaCategoryContainer' },
+			{ style: this.state.contBox, id: 'mediaCategoryContainer' },
 			shownList[this.state.currentCard],
 			React.createElement(
 				'button',
@@ -33660,8 +33723,15 @@ module.exports = React.createClass({
 	},
 	onNext: function onNext(e, currentCard) {
 		this.setState({
-			currentCard: currentCard + 1
+			currentCard: currentCard + 1,
+			contBox: {}
 		});
+		// if(this.state.testTran === 'testTranBoxFinish') {
+		// 	this.setState({
+		// 		testTran: 'testTranBoxStart'
+		// 	})
+		// }
+		// testTran: 'testTranBoxFinish'
 		if (this.props.mediaCategory === 'mov' && currentCard == this.state.mediaMOV.length - 1) {
 			this.setState({
 				currentCard: 0
@@ -33676,6 +33746,12 @@ module.exports = React.createClass({
 		this.setState({
 			currentCard: currentCard - 1
 		});
+		// if(this.state.testTran === 'testTranBoxStart') {
+		// 	this.setState({
+		// 		testTran: 'testTranBoxFinish'
+		// 	})
+		// }
+		// testTran: 'testTranBoxStart'
 		if (this.props.mediaCategory === 'mov' && currentCard === 0) {
 			this.setState({
 				currentCard: 4
@@ -33688,7 +33764,7 @@ module.exports = React.createClass({
 	}
 });
 
-},{"react":169}],173:[function(require,module,exports){
+},{"react":169}],174:[function(require,module,exports){
 "use strict";
 
 var React = require('react');
@@ -33696,13 +33772,13 @@ var React = require('react');
 module.exports = React.createClass({
 	displayName: "exports",
 
-	getInitialState: function getInitialState() {
-		return {
-			currentChoice: null
-		};
-	},
+	// getInitialState: function() {
+	// 	return {
+	// 		currentChoice: null
+	// 	};
+	// },
 	render: function render() {
-		var currentChoice = null;
+		// let currentChoice = null;
 		// if(!this.state.currentChoice) {
 		// 	currentChoice = 'Media Page'
 		// }
@@ -33747,7 +33823,7 @@ module.exports = React.createClass({
 	}
 });
 
-},{"react":169}],174:[function(require,module,exports){
+},{"react":169}],175:[function(require,module,exports){
 "use strict";
 
 var React = require('react');
@@ -33798,7 +33874,7 @@ module.exports = React.createClass({
 					null,
 					React.createElement(
 						"a",
-						{ href: "#" },
+						{ href: "#/lore" },
 						"Lore"
 					),
 					React.createElement("hr", null)
@@ -33818,7 +33894,7 @@ module.exports = React.createClass({
 	}
 });
 
-},{"react":169}],175:[function(require,module,exports){
+},{"react":169}],176:[function(require,module,exports){
 'use strict';
 
 var React = require('react');
@@ -33833,13 +33909,15 @@ var HomeComponent = require('./components/HomeComponent.js');
 var NavComponent = require('./components/NavComponent.js');
 var MediaComponent = require('./components/MediaComponent.js');
 var MediaCategoryComponent = require('./components/MediaCategoryComponent.js');
+var LoreCategoryComponent = require('./components/LoreCategoryComponent.js');
 
 var Router = Backbone.Router.extend({
 	routes: {
 		'': 'home',
 		'#': 'home',
 		'media': 'media',
-		'media/:mediaCategory': 'mediaCategory'
+		'media/:mediaCategory': 'mediaCategory',
+		'lore': 'lore'
 	},
 	home: function home() {
 		ReactDOM.render(React.createElement(NavComponent, { router: this }), nav);
@@ -33852,13 +33930,17 @@ var Router = Backbone.Router.extend({
 	mediaCategory: function mediaCategory(_mediaCategory) {
 		ReactDOM.render(React.createElement(NavComponent, { router: this }), nav);
 		ReactDOM.render(React.createElement(MediaCategoryComponent, { mediaCategory: _mediaCategory, router: this }), main);
+	},
+	lore: function lore() {
+		ReactDOM.render(React.createElement(NavComponent, { router: this }), nav);
+		ReactDOM.render(React.createElement(LoreCategoryComponent, { router: this }), main);
 	}
 });
 
 var r = new Router();
 Backbone.history.start();
 
-},{"./components/HomeComponent.js":171,"./components/MediaCategoryComponent.js":172,"./components/MediaComponent.js":173,"./components/NavComponent.js":174,"backbone":1,"jquery":28,"react":169,"react-dom":30}]},{},[175])
+},{"./components/HomeComponent.js":171,"./components/LoreCategoryComponent.js":172,"./components/MediaCategoryComponent.js":173,"./components/MediaComponent.js":174,"./components/NavComponent.js":175,"backbone":1,"jquery":28,"react":169,"react-dom":30}]},{},[176])
 
 
 //# sourceMappingURL=bundle.js.map
