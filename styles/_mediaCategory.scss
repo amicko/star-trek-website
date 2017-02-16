@@ -6,6 +6,7 @@
 		width: 90%;
 		margin: 1em auto;
 		padding: 1em 0;
+		animation: fadeIn 1s;
 
 		h3 {
 
@@ -17,16 +18,60 @@
 
 		p {
 			margin-left: 1em;
+		}
+
+		#btnContainer {
+			display: block;
+			margin: 0 auto;
+
+			button {
+				width: 35%;
+				margin: 0 5.25%;
+				border-radius: 10px;
+				color: white;
+			}
+
+			#prevBtn {
+				background-color: blue;
+				background-color: linear-gradient(blue, darkblue);
+			}
+
+			#prevBtn:hover {
+				background-color: darkblue;
+				background-color: linear-gradient(darkblue, black);
+				transition: 1s;
+			}
+
+			#nextBtn {
+				background-color: red;
+				background-color: linear-gradient(to right, red, darkred);
+			}
+
+			#nextBtn:hover {
+				background-color: darkred;
+				background-color: linear-gradient(darkred, black);
+				transition: 1s;
+			}
+		}
+
+		@keyframes fadeIn {
+		  0% {
+		    opacity: 0;
+		  }
+		  100% {
+		    opacity: 1;
+		  }
 		}
 	}
 
 	.episodeBox {
 		width: 90%;
 		margin: 1em auto;
-		padding: 1em 0;
+		padding: 1em 0;	
+		animation: fadeIn 1s;
 
 		h3 {
-
+			text-align: center;
 		}
 
 		h4 {
@@ -36,7 +81,54 @@
 		p {
 			margin-left: 1em;
 		}
+
+		#btnContainer {
+			display: block;
+			margin: 0 auto;
+
+			button {
+				width: 35%;
+				margin: 0 5.25%;
+				border-radius: 10px;
+				color: white;
+			}
+
+			#prevBtn {
+				background-color: blue;
+				background-color: linear-gradient(blue, darkblue);
+			}
+
+			#prevBtn:hover {
+				background-color: darkblue;
+				background-color: linear-gradient(darkblue, black);
+				transition: 1s;
+			}
+
+			#nextBtn {
+				background-color: red;
+				background-color: linear-gradient(to right, red, darkred);
+			}
+
+			#nextBtn:hover {
+				background-color: darkred;
+				background-color: linear-gradient(darkred, black);
+				transition: 1s;
+			}
+		}
+
+		@keyframes fadeIn {
+		  0% {
+		    opacity: 0;
+		  }
+		  100% {
+		    opacity: 1;
+		  }
+		}
 	}
+
+
+
+	
 
 	.testTranBoxStart {
 		background-color: #737C92;
