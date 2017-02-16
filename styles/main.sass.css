@@ -240,6 +240,19 @@
   margin-top: 1em;
   padding: 1em;
   background-image: radial-gradient(ellipse, #ffffff 0%, #B7B8BA 65%, #737C92 85%); }
+  #loreContainer a {
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    text-decoration: none; }
+  #loreContainer a:hover {
+    font-weight: bold;
+    color: black; }
+
+#loreCategoryContainer {
+  margin-top: 1em;
+  padding: 1em;
+  background-image: radial-gradient(ellipse, #ffffff 0%, #B7B8BA 65%, #737C92 85%); }
 
 body {
   margin: 0;
