@@ -2,7 +2,8 @@
   display: block;
   background-image: radial-gradient(ellipse, #ffffff 0%, #B7B8BA 65%, #737C92 85%);
   font-family: 'Orbitron', sans-serif, bold;
-  padding-top: 1px; }
+  padding-top: 1px;
+  margin-bottom: 1em; }
   .NavContainer img {
     display: none; }
   .NavContainer h1 {
@@ -128,7 +129,8 @@
 @media screen and (min-width: 1000px) {
   .NavContainer {
     width: 1000px;
-    margin: 0 auto; } }
+    margin: 0 auto;
+    margin-bottom: 1em; } }
 
 .homeContainer {
   display: block;
@@ -160,9 +162,12 @@
   .homeContainer #homePersonalHistory {
     background-image: radial-gradient(ellipse, #ffffff 0%, #B7B8BA 65%, #737C92 85%); }
   .homeContainer #homeFooter {
+    font-size: 12px;
+    text-align: center;
     background-color: #737C92;
     margin-bottom: 1em; }
     .homeContainer #homeFooter ul {
+      display: none;
       text-align: center;
       list-style-type: none; }
       .homeContainer #homeFooter ul li {
@@ -179,6 +184,12 @@
 
 .mediaContainer {
   background-image: radial-gradient(ellipse, #ffffff 0%, #B7B8BA 65%, #737C92 85%); }
+  .mediaContainer .mediaIntro {
+    padding-top: 1px; }
+    .mediaContainer .mediaIntro h2 {
+      margin: 0.9em; }
+    .mediaContainer .mediaIntro p {
+      margin: 0.75em; }
 
 @media screen and (min-width: 450px) {
   .mediaContainer {

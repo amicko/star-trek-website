@@ -7,22 +7,20 @@ module.exports = React.createClass({
 				<section id="homeIntroduction">
 					<h2>Introduction</h2>
 					<p>
-						Welcome to Memory Alpha, a fan site designed to help newcomers to the Star Trek universe. This site is designed with all fans in mind, but with an eye for the newest. Here you will find a little of something for every category of Trekkie.
+						Welcome to Memory Alpha, a fan site designed to help newcomers to the Star Trek universe. This site is designed with all fans in mind, but with an eye for the newest.
+					</p>
+					<p>
+						To me, Star Trek is the goal post that humanity can set for itself. In the world portrayed there, we see a humanity without greed, or poverty. A future full of hope, and wonderful technological achievements as far as the eye can see. Star Trek is in many ways the utopia we can all aspire to, where every person strives to better themselves for the sake of their own improvement and the improvement of mankind as a whole. It is incredible, and I hope you will find your time here helpful in exploring the world of Star Trek for yourself.
 					</p>
 					<ul>
 						<li>
-							<h3>Newbies</h3>
-							<p>This site has a selection from every major category found within the Star Trek world, including top episodes from each of the series. The best the movies have to offer. Which books and magazines will find you begging for more material. The very best in Star Trek gaming.
+							<h3>Media</h3>
+							<p>In the Media area, you will find my top recommended lists for all the movies and series of Star Trek, for people who have never seen any or very little of what is available.
 							</p>
 						</li>
 						<li>
-							<h3>Moderate Trek Fans</h3>
-							<p>You will find here in-depth insight into some of the very best apsects of Star Trek, perhaps enlightening some fans who already loved Trek regarding parts they have yet to experience. You will also discover some hard to find material here(especially within the Lore section).
-							</p>
-						</li>
-						<li>
-							<h3>Hard-Core Trekkies</h3>
-							<p>If you think you are beyond anything this site has to offer, I invite you to test your Trekkie Technical Experience by playing the built-in browser game found in the games section, designed by a Trekkie, for Trekkies.(Still to come!)
+							<h3>Lore</h3>
+							<p>In the Lore area you will find a breakdown of the most common aspects of the Star Trek universe, from the technology the characters use, to the locations they use them in, to the starships to travel on to get there. 
 							</p>
 						</li>
 					</ul>
@@ -34,53 +32,22 @@ module.exports = React.createClass({
 				<section id="homeFranchiseHistory">
 					<h2>Franchise History</h2>
 					<p>
-						Star Trek, as a franchise, has a long-lived and prosperous history. It is full of interesting information, as well as incredible stories of changed lived and new horizons for countless individuals. I won't get too in-depth into it all, as this is an opportunity for the new-comer to get an idea of what made Star Trek the franchise that has come to mean so much to so many people across the globe.
+						Star Trek, as a franchise, has a long-lived and prosperous history. It is full of interesting information, as well as incredible stories of changed lived and new horizons for countless individuals. I won't get too in-depth into it all, as this is an opportunity for the new-comer to get an idea of what made Star Trek the franchise that has come to mean so much to so many people across the globe. However, if you are interested in learning more, please follow <a href="https://en.wikipedia.org/wiki/Star_Trek#History_and_production">this link to Star Trek's wiki page</a>.
 					</p>
-					<h3>Beginnings and the Original Series</h3>
-					<p>
-						In 1964 Gene Roddenberry created a proposal for the original series of Star Trek and pitched it to Desilu Productions. He deliberately made it a very similar show to the westerns of the time, which were very popular, but gave it a sci-fi twist. With the aid of Desilu, Roddenberry had a proposal-worthy script to present to NBC for the new TV series.
-					</p>
-					<p>
-						NBC loved the idea enough that they allowed Roddenberry to actually create a second pilot(after the first failed to provide what they were looking for), an instance incredibly rare in the TV industry of the time. The show began airing in 1966, and met, initially, with very favorable ratings.
-					</p>
-					<p>
-						In it's second season, the ratings began to considerably drop off, and it was only after an unprecedented letter-writing campaign that pushed NBC to renew the show for a third season. Unfortunately, they decided to move the show's time slot to Friday evenings(which was the time the show's primary demographic was not watching TV). Ultimately, the show was canceled after it's third season, in 1969.
-					</p>
-					<h3>Syndication and the Silver Screen</h3>
-						<p>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc tellus turpis, vehicula eu placerat nec, venenatis sed massa. Ut ultrices ante ut lectus euismod porttitor. Duis ut condimentum est. Morbi non condimentum tortor, eget sagittis sem. Pellentesque pulvinar pellentesque justo sit amet faucibus. Vivamus rhoncus elit ut leo ultricies, a sodales nisl mattis. In maximus dictum orci, sit amet consectetur tellus ullamcorper tempor. Quisque a libero at est sagittis fringilla. Fusce pharetra ipsum in augue aliquam, at vehicula felis consectetur.
-					</p>
-					<h3>The Next Generation of Star Trek Fans</h3>
-						<p>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc tellus turpis, vehicula eu placerat nec, venenatis sed massa. Ut ultrices ante ut lectus euismod porttitor. Duis ut condimentum est. Morbi non condimentum tortor, eget sagittis sem. Pellentesque pulvinar pellentesque justo sit amet faucibus. Vivamus rhoncus elit ut leo ultricies, a sodales nisl mattis. In maximus dictum orci, sit amet consectetur tellus ullamcorper tempor. Quisque a libero at est sagittis fringilla. Fusce pharetra ipsum in augue aliquam, at vehicula felis consectetur.
-						</p>
-					<h3>Star Trek Ventures Even Deeper Into Space and Into a Richer Universe</h3>
-						<p>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc tellus turpis, vehicula eu placerat nec, venenatis sed massa. Ut ultrices ante ut lectus euismod porttitor. Duis ut condimentum est. Morbi non condimentum tortor, eget sagittis sem. Pellentesque pulvinar pellentesque justo sit amet faucibus. Vivamus rhoncus elit ut leo ultricies, a sodales nisl mattis. In maximus dictum orci, sit amet consectetur tellus ullamcorper tempor. Quisque a libero at est sagittis fringilla. Fusce pharetra ipsum in augue aliquam, at vehicula felis consectetur.
-						</p>
-					<h3>The Trek World Voyages Where No Trekkie Has Gone Before</h3>
-						<p>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc tellus turpis, vehicula eu placerat nec, venenatis sed massa. Ut ultrices ante ut lectus euismod porttitor. Duis ut condimentum est. Morbi non condimentum tortor, eget sagittis sem. Pellentesque pulvinar pellentesque justo sit amet faucibus. Vivamus rhoncus elit ut leo ultricies, a sodales nisl mattis. In maximus dictum orci, sit amet consectetur tellus ullamcorper tempor. Quisque a libero at est sagittis fringilla. Fusce pharetra ipsum in augue aliquam, at vehicula felis consectetur.
-						</p>
-					<h3>A Jump Back In Time</h3>
-						<p>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc tellus turpis, vehicula eu placerat nec, venenatis sed massa. Ut ultrices ante ut lectus euismod porttitor. Duis ut condimentum est. Morbi non condimentum tortor, eget sagittis sem. Pellentesque pulvinar pellentesque justo sit amet faucibus. Vivamus rhoncus elit ut leo ultricies, a sodales nisl mattis. In maximus dictum orci, sit amet consectetur tellus ullamcorper tempor. Quisque a libero at est sagittis fringilla. Fusce pharetra ipsum in augue aliquam, at vehicula felis consectetur.
-						</p>
-					<h3>Not your Grandfather's Star Trek</h3>
-						<p>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc tellus turpis, vehicula eu placerat nec, venenatis sed massa. Ut ultrices ante ut lectus euismod porttitor. Duis ut condimentum est. Morbi non condimentum tortor, eget sagittis sem. Pellentesque pulvinar pellentesque justo sit amet faucibus. Vivamus rhoncus elit ut leo ultricies, a sodales nisl mattis. In maximus dictum orci, sit amet consectetur tellus ullamcorper tempor. Quisque a libero at est sagittis fringilla. Fusce pharetra ipsum in augue aliquam, at vehicula felis consectetur.
-						</p>
 				</section>
 				<section id="homePersonalHistory">
 					<h2>Personal History</h2>
 					<p>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc tellus turpis, vehicula eu placerat nec, venenatis sed massa. Ut ultrices ante ut lectus euismod porttitor. Duis ut condimentum est. Morbi non condimentum tortor, eget sagittis sem. Pellentesque pulvinar pellentesque justo sit amet faucibus. Vivamus rhoncus elit ut leo ultricies, a sodales nisl mattis. In maximus dictum orci, sit amet consectetur tellus ullamcorper tempor. Quisque a libero at est sagittis fringilla. Fusce pharetra ipsum in augue aliquam, at vehicula felis consectetur.
+						My own personal experience with Star Trek started when I was just a little kid. My grandfather introduced me to the Original Series of Star Trek and guided me through each successive series. His bedroom was a treasure trove of Star Trek memorabilia, and it was always so exciting to explore his walls and bookshelves which were all covered with everything from autographed images, to models, to action figurines and prop replicas.
 					</p>
 					<p>
-						Pellentesque erat massa, placerat pulvinar eros et, consectetur dapibus justo. Fusce tempor tellus id nibh auctor pharetra. Pellentesque venenatis a tortor non congue. Cras libero lectus, accumsan blandit euismod et, accumsan id velit. Vestibulum massa tellus, rhoncus eget mattis sit amet, elementum non felis. Duis ac accumsan diam. Nulla ut dignissim magna. Suspendisse vel consequat dolor, a varius purus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Quisque pharetra libero id dignissim blandit. Fusce rutrum eros mauris, bibendum scelerisque velit molestie quis. In ut facilisis nisl.
+						Star Trek is actually what initially got me interested in programming. My early online excursions introduced me to the world of chatting, and I found an incredible sci-fi chatroom community by the name of Outpost Ten Forward. Among many of the sites mechanics and features included the ability to access basic programming abilities in the chat itself. I loved that site and wanted to help contribute to it's further success, which is what led me to my early education in programming.
 					</p>
 				</section>
 				<footer id="homeFooter">
+					<p>
+						This site was created by Aaron Micko. Star Trek and all it's related subsidiaries are registered trademarks of Paramount Pictures Inc. This site is for non-commercial purposes only. Any misuse of copyright materials is purely accidental.
+					</p>
 					<ul>
 						<li>Footer Stuff</li>
 						<vr/>
