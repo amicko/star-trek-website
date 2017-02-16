@@ -86,7 +86,6 @@ module.exports = React.createClass({
 						<vr/>
 						<li>Footer Stuff</li>
 						<li>Footer Stuff</li>
-						<li>Footer Stuff</li>
 					</ul>
 				</footer>
 			</div>

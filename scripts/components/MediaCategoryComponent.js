@@ -254,6 +254,10 @@ module.exports = React.createClass({
 					<p>{movie.movieSummary}</p>
 					<h4>Reason I List It</h4>
 					<p>{movie.movieReason}</p>
+					<div id="btnContainer">
+						<button id="prevBtn" onClick={(e) => {this.onPrev(e, currentCard)}}>Prev</button>
+						<button id="nextBtn" onClick={(e) => {this.onNext(e, currentCard)}}>Next</button>
+					</div>
 				</div>
 			)
 		})
@@ -267,7 +271,12 @@ module.exports = React.createClass({
 					<p>{episode.episodeSummary}</p>
 					<h4>Reason I List It</h4>
 					<p>{episode.episodeReason}</p>
+					<div id="btnContainer">
+						<button id="prevBtn" onClick={(e) => {this.onPrev(e, currentCard)}}>Prev</button>
+						<button id="nextBtn" onClick={(e) => {this.onNext(e, currentCard)}}>Next</button>
+					</div>
 				</div>
+
 			)
 		})
 
@@ -280,6 +289,10 @@ module.exports = React.createClass({
 					<p>{episode.episodeSummary}</p>
 					<h4>Reason I List It</h4>
 					<p>{episode.episodeReason}</p>
+					<div id="btnContainer">
+						<button id="prevBtn" onClick={(e) => {this.onPrev(e, currentCard)}}>Prev</button>
+						<button id="nextBtn" onClick={(e) => {this.onNext(e, currentCard)}}>Next</button>
+					</div>
 				</div>
 			)
 		})
@@ -293,6 +306,10 @@ module.exports = React.createClass({
 					<p>{episode.episodeSummary}</p>
 					<h4>Reason I List It</h4>
 					<p>{episode.episodeReason}</p>
+					<div id="btnContainer">
+						<button id="prevBtn" onClick={(e) => {this.onPrev(e, currentCard)}}>Prev</button>
+						<button id="nextBtn" onClick={(e) => {this.onNext(e, currentCard)}}>Next</button>
+					</div>
 				</div>
 			)
 		})
@@ -305,6 +322,10 @@ module.exports = React.createClass({
 					<p>{episode.episodeSummary}</p>
 					<h4>Reason I List It</h4>
 					<p>{episode.episodeReason}</p>
+					<div id="btnContainer">
+						<button id="prevBtn" onClick={(e) => {this.onPrev(e, currentCard)}}>Prev</button>
+						<button id="nextBtn" onClick={(e) => {this.onNext(e, currentCard)}}>Next</button>
+					</div>
 				</div>
 			)
 		})
@@ -366,8 +387,7 @@ module.exports = React.createClass({
 		return (
 			<div style={this.state.contBox} id="mediaCategoryContainer">
 				{shownList[this.state.currentCard]}
-				<button onClick={(e) => {this.onPrev(e, currentCard)}}>Prev</button>
-				<button onClick={(e) => {this.onNext(e, currentCard)}}>Next</button>
+				
 			</div>
 		)
 	},
