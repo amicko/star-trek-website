@@ -33250,6 +33250,79 @@ module.exports = React.createClass({
 });
 
 },{"react":169}],172:[function(require,module,exports){
+'use strict';
+
+var React = require('react');
+
+module.exports = React.createClass({
+	displayName: 'exports',
+
+	getInitialState: function getInitialState() {
+		return {
+			loreTechnology: 'This will be the Lore Technology Category Page',
+			loreAffiliation: 'This will be the Lore Affiliation Category Page',
+			loreStarship: 'This will be the Lore Starship Category Page',
+			loreLocation: 'This will be the Lore Location Category Page'
+		};
+	},
+	render: function render() {
+		var newIndex = undefined;
+		// var technologyMap = this.state.loreTechnology.map((technology, index) => {
+		// 	newIndex = index + 1
+		// 	return (
+		// 		<div className="technologyBox" key={index}>
+		// 			<h2>{newIndex}. {technology.test}</h2>
+		// 		</div>
+		// 	)
+		// })
+
+		// var affiliationMap = this.state.loreAffiliation.map((affiliation, index) => {
+		// 	newIndex = index + 1
+		// 	return (
+		// 		<div className="affiliationBox" key={index}>
+		// 			<h2>{newIndex}. {affiliation.test}</h2>
+		// 		</div>
+		// 	)
+		// })
+
+		// var starshipMap = this.state.loreStarship.map((starship, index) => {
+		// 	newIndex = index + 1
+		// 	return (
+		// 		<div className="starshipBox" key={index}>
+		// 			<h2>{newIndex}. {starship.test}</h2>
+		// 		</div>
+		// 	)
+		// })
+
+		// var locationMap = this.state.loreLocation.map((location, index) => {
+		// 	newIndex = index + 1
+		// 	return (
+		// 		<div className="locationBox" key={index}>
+		// 			<h2>{newIndex}. {location.test}</h2>
+		// 		</div>
+		// 	)
+		// })
+
+		var shownList = [];
+		if (this.props.loreCategory == 'technology') {
+			shownList = this.state.loreTechnology;
+		} else if (this.props.loreCategory == 'affiliation') {
+			shownList = this.state.loreAffiliation;
+		} else if (this.props.loreCategory == 'starship') {
+			shownList = this.state.loreStarship;
+		} else if (this.props.loreCategory == 'location') {
+			shownList = this.state.loreLocation;
+		}
+
+		return React.createElement(
+			'div',
+			{ id: 'loreCategoryContainer' },
+			shownList
+		);
+	}
+});
+
+},{"react":169}],173:[function(require,module,exports){
 "use strict";
 
 var React = require('react');
@@ -33270,12 +33343,35 @@ module.exports = React.createClass({
 				"p",
 				null,
 				"This is the future home of the lore page! You will find all the information a new-comer to Star Trek will need to learn about the various aspects of Star Trek. From the Galor-Class cruisers of the fascist-state Cardassians to the politically manipulative planetary history of the Romulan capitol of Romulus, you will find it all in one of the following categories."
+			),
+			React.createElement(
+				"a",
+				{ href: "#/lore/technology" },
+				"TECHNOLOGY"
+			),
+			React.createElement("br", null),
+			React.createElement(
+				"a",
+				{ href: "#/lore/affiliation" },
+				"AFFILIATIONS"
+			),
+			React.createElement("br", null),
+			React.createElement(
+				"a",
+				{ href: "#/lore/starship" },
+				"STARSHIPS"
+			),
+			React.createElement("br", null),
+			React.createElement(
+				"a",
+				{ href: "#/lore/location" },
+				"LOCATIONS"
 			)
 		);
 	}
 });
 
-},{"react":169}],173:[function(require,module,exports){
+},{"react":169}],174:[function(require,module,exports){
 'use strict';
 
 var React = require('react');
@@ -33764,7 +33860,7 @@ module.exports = React.createClass({
 	}
 });
 
-},{"react":169}],174:[function(require,module,exports){
+},{"react":169}],175:[function(require,module,exports){
 "use strict";
 
 var React = require('react');
@@ -33823,7 +33919,7 @@ module.exports = React.createClass({
 	}
 });
 
-},{"react":169}],175:[function(require,module,exports){
+},{"react":169}],176:[function(require,module,exports){
 "use strict";
 
 var React = require('react');
@@ -33894,7 +33990,7 @@ module.exports = React.createClass({
 	}
 });
 
-},{"react":169}],176:[function(require,module,exports){
+},{"react":169}],177:[function(require,module,exports){
 'use strict';
 
 var React = require('react');
@@ -33909,6 +34005,7 @@ var HomeComponent = require('./components/HomeComponent.js');
 var NavComponent = require('./components/NavComponent.js');
 var MediaComponent = require('./components/MediaComponent.js');
 var MediaCategoryComponent = require('./components/MediaCategoryComponent.js');
+var LoreComponent = require('./components/LoreComponent.js');
 var LoreCategoryComponent = require('./components/LoreCategoryComponent.js');
 
 var Router = Backbone.Router.extend({
@@ -33917,7 +34014,8 @@ var Router = Backbone.Router.extend({
 		'#': 'home',
 		'media': 'media',
 		'media/:mediaCategory': 'mediaCategory',
-		'lore': 'lore'
+		'lore': 'lore',
+		'lore/:loreCategory': 'loreCategory'
 	},
 	home: function home() {
 		ReactDOM.render(React.createElement(NavComponent, { router: this }), nav);
@@ -33933,14 +34031,18 @@ var Router = Backbone.Router.extend({
 	},
 	lore: function lore() {
 		ReactDOM.render(React.createElement(NavComponent, { router: this }), nav);
-		ReactDOM.render(React.createElement(LoreCategoryComponent, { router: this }), main);
+		ReactDOM.render(React.createElement(LoreComponent, { router: this }), main);
+	},
+	loreCategory: function loreCategory(_loreCategory) {
+		ReactDOM.render(React.createElement(NavComponent, { router: this }), nav);
+		ReactDOM.render(React.createElement(LoreCategoryComponent, { loreCategory: _loreCategory, router: this }), main);
 	}
 });
 
 var r = new Router();
 Backbone.history.start();
 
-},{"./components/HomeComponent.js":171,"./components/LoreCategoryComponent.js":172,"./components/MediaCategoryComponent.js":173,"./components/MediaComponent.js":174,"./components/NavComponent.js":175,"backbone":1,"jquery":28,"react":169,"react-dom":30}]},{},[176])
+},{"./components/HomeComponent.js":171,"./components/LoreCategoryComponent.js":172,"./components/LoreComponent.js":173,"./components/MediaCategoryComponent.js":174,"./components/MediaComponent.js":175,"./components/NavComponent.js":176,"backbone":1,"jquery":28,"react":169,"react-dom":30}]},{},[177])
 
 
 //# sourceMappingURL=bundle.js.map

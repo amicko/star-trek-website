@@ -2,4 +2,16 @@
 	margin-top: 1em;
 	padding: 1em;
 	background-image: radial-gradient(ellipse, #ffffff 0%, #B7B8BA 65%, #737C92 85%);
+
+	a {
+		display: block;
+		text-align: center;
+		margin: 0 auto;
+		text-decoration: none;
+	}
+
+	a:hover {
+		font-weight: bold;
+		color: black;
+	}
 }
