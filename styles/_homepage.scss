@@ -81,11 +81,13 @@
 	}
 
 	#homeFooter {
+		font-size: 12px;
+		text-align: center;
 		background-color: #737C92;
-		// height: 20px;
 		margin-bottom: 1em;
 
 		ul {
+			display: none;
 			text-align: center;
 			list-style-type: none;
 

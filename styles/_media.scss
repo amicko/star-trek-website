@@ -1,57 +1,17 @@
 .mediaContainer {
 	background-image: radial-gradient(ellipse, #ffffff 0%, #B7B8BA 65%, #737C92 85%);
-	// display: none;
 
-	// .mediaIntro {
+	.mediaIntro {
+		padding-top: 1px;
 
+		h2 {
+			margin: 0.9em;
+		}
 
-	// 	h2 {
-
-	// 	}
-
-	// 	p {
-
-	// 	}
-	// }
-
-	// a {
-	// 	display: inline-block;
-	// 	margin: 2em 10% 2em 20%;
-	// 	border-radius: 18px;
-	// 	height: 14.2em;
-	// 	width: 10em;
-	// 	display: block;
-	// 	background-repeat: no-repeat;
-	// 	background-size: cover;
-	// }
-
-	// #mediaMovieIcon {
-	// 	display: block;
-	// 	margin: 2em auto;
-	// 	height: 175px;
-	// 	width: 450px;
-	// 	background-image: url("../images/ST-Movies/Movies082913.gif");
-	// }
-
-	// #mediaOriginalSeriesIcon {
-	// 	display: inline-block;
-	// 	background-image: url("../images/ST-Original Series/TOS_Promo_Poster_Rare_Appvd.jpg");
-	// }
-
-	// #mediaTNGSeriesIcon {
-	// 	display: inline-block;
-	// 	background-image: url("../images/ST-Next Generation/star-trek-the-next-generation-521b936d8d1d0.jpg");
-	// }
-
-	// #mediaDS9SeriesIcon {
-	// 	display: inline-block;
-	// 	background-image: url("../images/ST-Deep Space Nine/2012-06-28-stds9-coverposter.jpg");
-	// }
-
-	// #mediaVoyagerSeriesIcon {
-	// 	display: inline-block;
-	// 	background-image: url("../images/ST-Voyager/star-trek-voyager-5221b92451720.jpg");
-	// }
+		p {
+			margin: 0.75em;
+		}
+	}
 }
 
 @media screen and(min-width: 450px) {
