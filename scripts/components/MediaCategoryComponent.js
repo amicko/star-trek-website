@@ -5,7 +5,6 @@ module.exports = React.createClass({
 		return {
 			testTran: 'testTranBoxStart',
 			currentCard: 0,
-			contBox: {},
 			mediaMOV: [
 				{
 					movieName: 'Movie One',
@@ -385,17 +384,14 @@ module.exports = React.createClass({
 				// <div className={this.state.testTran}>Rawr</div>
 				
 		return (
-			<div style={this.state.contBox} id="mediaCategoryContainer">
+			<div id="mediaCategoryContainer">
 				{shownList[this.state.currentCard]}
-				
 			</div>
 		)
 	},
 	onNext: function(e, currentCard) {
 		this.setState({
-			currentCard: currentCard + 1,
-			contBox: {},
-			// testTran: 'testTranBoxFinish'
+			currentCard: currentCard + 1
 		});
 		// if(this.state.testTran === 'testTranBoxFinish') {
 		// 	this.setState({

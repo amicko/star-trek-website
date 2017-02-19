@@ -7,12 +7,14 @@ module.exports = React.createClass({
 				{
 					name: 'Transporters',
 					image: './images/technology/transporter.jpg',
-					description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vitae erat vel leo sollicitudin tempus vel vel dui. Aliquam id purus sit amet libero laoreet porttitor. Maecenas sit amet pulvinar velit, sit amet efficitur quam. Nunc tempus laoreet vulputate.'
+					description: 'The transporter is a device which instantaneously teleports or beams an organic or inorganic thing from one point to another by deconstructing the item on a molecular level and reassembling it at the destination. Transporters allow civilizations to transport supplies and people across great distances without ever having to manually ferry those things directly.',
+					link: 'http://memory-alpha.wikia.com/wiki/Transporter'
 				},
 				{
-					name: 'Warp Engines',
+					name: 'Warp Drive',
 					image: './images/technology/warp-core.jpg',
-					description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vitae erat vel leo sollicitudin tempus vel vel dui. Aliquam id purus sit amet libero laoreet porttitor. Maecenas sit amet pulvinar velit, sit amet efficitur quam. Nunc tempus laoreet vulputate. Vestibulum nibh est, laoreet eget dignissim eu, pretium id felis. Donec mattis orci ante, a vestibulum arcu eleifend eu. Integer tempus nibh et enim tempus sollicitudin.'
+					description: 'Nearly all starships in the Star Trek universe use some kind of warp-driven engine. It is the warp drive design that allows civilizations to go faster than the speed of light. They do this by generating a warp field that creates a bubble around the starship that allows them to essentially break the laws of physics by going faster than the speed of light.',
+					link: 'http://memory-alpha.wikia.com/wiki/Warp_drive'
 				},
 				{
 					name: 'Replicators',
@@ -178,6 +180,9 @@ module.exports = React.createClass({
 			]
 		};
 	},
+	componentDidMount: function() {
+		// window.location.reload(false);
+	},
 	render: function() {
 		let newIndex;
 		var technologyMap = this.state.loreTechnology.map((technology, index) => {
@@ -187,6 +192,8 @@ module.exports = React.createClass({
 					<h3>{newIndex}. {technology.name}</h3>
 					<img src={technology.image}/>
 					<p>{technology.description}</p>
+					<br/>
+					<p>More information can be learned <a href={technology.link} target="_blank">here</a>.</p>
 				</div>
 			)
 		})

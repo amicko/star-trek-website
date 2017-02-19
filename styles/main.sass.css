@@ -137,45 +137,164 @@
   background-image: none;
   padding-bottom: 1px; }
   .homeContainer section {
+    background-color: #C7D0E7;
     padding: 1px;
-    margin: 1em 0; }
+    margin: 1em 0;
+    width: 100%;
+    border: 1px;
+    border-radius: 15px; }
     .homeContainer section h2 {
       text-align: center;
       margin-top: 1em; }
-    .homeContainer section p {
-      margin: 1em 10% 2em 10%; }
   .homeContainer #homeIntroduction {
-    background-image: radial-gradient(ellipse, #ffffff 0%, #B7B8BA 65%, #737C92 85%); }
-    .homeContainer #homeIntroduction p a {
-      text-decoration: none; }
-    .homeContainer #homeIntroduction ul {
-      margin: auto auto;
-      width: 75%; }
-      .homeContainer #homeIntroduction ul li {
-        list-style-type: none; }
-        .homeContainer #homeIntroduction ul li h3 {
-          margin-left: 3em; }
-  .homeContainer #homeFranchiseHistory {
-    background-image: radial-gradient(ellipse, #ffffff 0%, #B7B8BA 65%, #737C92 85%); }
-    .homeContainer #homeFranchiseHistory h3 {
-      text-align: center; }
-  .homeContainer #homePersonalHistory {
-    background-image: radial-gradient(ellipse, #ffffff 0%, #B7B8BA 65%, #737C92 85%); }
+    border-radius: 0;
+    background-color: #000;
+    color: lightgrey;
+    font-weight: bold;
+    padding: 1em;
+    width: 100%;
+    box-sizing: border-box; }
+    .homeContainer #homeIntroduction p {
+      line-height: 2em; }
+      .homeContainer #homeIntroduction p .quotes {
+        font-size: 1.5em; }
+  .homeContainer #informationContainer {
+    box-sizing: border-box; }
+    .homeContainer #informationContainer #homeFranchiseHistory p {
+      padding: 0 1em 1em 1em; }
+    .homeContainer #informationContainer #homePersonalHistory p {
+      padding: 0 1em 1em 1em; }
+  .homeContainer #carouselContainer {
+    box-sizing: border-box; }
+    .homeContainer #carouselContainer #homeMediaAdvert {
+      box-sizing: border-box;
+      border-radius: 0;
+      background-color: #000;
+      color: #fff; }
+      .homeContainer #carouselContainer #homeMediaAdvert h3 {
+        text-align: center;
+        margin: 0;
+        margin-top: 10px; }
+      .homeContainer #carouselContainer #homeMediaAdvert p {
+        width: 100%;
+        font-size: 12px;
+        margin: 0;
+        text-align: center; }
+      .homeContainer #carouselContainer #homeMediaAdvert a .loreCollageCarousel img {
+        display: block;
+        width: 100%;
+        margin: 0 auto;
+        animation: fadeIn 2s; }
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+    .homeContainer #carouselContainer #homeLoreAdvert {
+      border-radius: 0;
+      background-color: #000;
+      color: #fff;
+      box-sizing: border-box; }
+      .homeContainer #carouselContainer #homeLoreAdvert h3 {
+        text-align: center;
+        margin: 0;
+        margin-top: 10px; }
+      .homeContainer #carouselContainer #homeLoreAdvert p {
+        width: 100%;
+        font-size: 12px;
+        margin: 0;
+        text-align: center; }
+      .homeContainer #carouselContainer #homeLoreAdvert a .loreCollageCarousel img {
+        display: block;
+        width: 100%;
+        margin: 0 auto;
+        animation: fadeIn 2s; }
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
   .homeContainer #homeFooter {
     font-size: 12px;
     text-align: center;
     background-color: #737C92;
-    margin-bottom: 1em; }
+    margin-bottom: 1em;
+    font-weight: bold; }
     .homeContainer #homeFooter ul {
       display: none;
       text-align: center;
       list-style-type: none; }
       .homeContainer #homeFooter ul li {
         display: inline-block;
-        margin: 0.4em; }
+        margin: 0.3em; }
       .homeContainer #homeFooter ul li:not(:last-child) {
         border-right: 1px solid black;
-        padding-right: 1em; }
+        padding-right: 0.4em; }
+
+@media screen and (min-width: 550px) {
+  .homeContainer #informationContainer {
+    overflow: hidden; }
+    .homeContainer #informationContainer #homeFranchiseHistory {
+      float: left;
+      width: 49%; }
+    .homeContainer #informationContainer #homePersonalHistory {
+      float: right;
+      width: 49%; }
+  .homeContainer #carouselContainer {
+    overflow: hidden; }
+    .homeContainer #carouselContainer #homeMediaAdvert {
+      min-height: 18em;
+      float: left;
+      width: 49%; }
+    .homeContainer #carouselContainer #homeLoreAdvert {
+      min-height: 18em;
+      float: right;
+      width: 49%; } }
+
+@media screen and (min-width: 900px) {
+  .homeContainer {
+    display: block;
+    background-image: none;
+    padding-bottom: 1px; }
+    .homeContainer section h2 {
+      text-align: center;
+      margin-top: 1em; }
+    .homeContainer #informationContainer {
+      margin-top: -1em;
+      float: left;
+      width: 63%; }
+      .homeContainer #informationContainer #homeFranchiseHistory {
+        float: none;
+        width: 100%; }
+      .homeContainer #informationContainer #homePersonalHistory {
+        float: none;
+        width: 100%; }
+    .homeContainer #carouselContainer {
+      margin-top: -1em;
+      float: right;
+      width: 35%; }
+      .homeContainer #carouselContainer #homeMediaAdvert {
+        min-height: 15em;
+        float: none;
+        width: 100%; }
+        .homeContainer #carouselContainer #homeMediaAdvert h3 {
+          margin-top: 0.5em; }
+        .homeContainer #carouselContainer #homeMediaAdvert p {
+          padding-right: 1em;
+          margin-right: 1em; }
+      .homeContainer #carouselContainer #homeLoreAdvert {
+        min-height: 15em;
+        float: none;
+        width: 100%; }
+        .homeContainer #carouselContainer #homeLoreAdvert h3 {
+          margin-top: 0.5em; }
+        .homeContainer #carouselContainer #homeLoreAdvert p {
+          padding-right: 1em;
+          margin-right: 1em; }
+    .homeContainer #homeFooter {
+      clear: both; } }
 
 @media screen and (min-width: 1000px) {
   .homeContainer {
@@ -183,17 +302,44 @@
     margin: 0 auto; } }
 
 .mediaContainer {
-  background-image: radial-gradient(ellipse, #ffffff 0%, #B7B8BA 65%, #737C92 85%); }
+  background-image: radial-gradient(ellipse, #ffffff 0%, #B7B8BA 65%, #737C92 85%);
+  padding-bottom: 1px; }
   .mediaContainer .mediaIntro {
     padding-top: 1px; }
     .mediaContainer .mediaIntro h2 {
       margin: 0.9em; }
     .mediaContainer .mediaIntro p {
       margin: 0.75em; }
+  .mediaContainer #mediaMovieIcon {
+    border-radius: 15px;
+    display: block;
+    margin: 2em auto;
+    height: 100px;
+    width: 300px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("../images/ST-Movies/Movies082913.gif"); }
+  .mediaContainer #tvBigContainer {
+    margin: 0 auto; }
+    .mediaContainer #tvBigContainer .tvSmallContainer a {
+      display: block;
+      margin: 2em auto;
+      border-radius: 18px;
+      height: 14.2em;
+      width: 10em;
+      background-repeat: no-repeat;
+      background-size: cover; }
+    .mediaContainer #tvBigContainer .tvSmallContainer #mediaOriginalSeriesIcon {
+      background-image: url("../images/ST-Original Series/TOS_Promo_Poster_Rare_Appvd.jpg"); }
+    .mediaContainer #tvBigContainer .tvSmallContainer #mediaTNGSeriesIcon {
+      background-image: url("../images/ST-Next Generation/star-trek-the-next-generation-521b936d8d1d0.jpg"); }
+    .mediaContainer #tvBigContainer .tvSmallContainer #mediaDS9SeriesIcon {
+      background-image: url("../images/ST-Deep Space Nine/2012-06-28-stds9-coverposter.jpg"); }
+    .mediaContainer #tvBigContainer .tvSmallContainer #mediaVoyagerSeriesIcon {
+      background-image: url("../images/ST-Voyager/star-trek-voyager-5221b92451720.jpg"); }
 
 @media screen and (min-width: 450px) {
   .mediaContainer {
-    display: block;
     padding-bottom: 1px; }
     .mediaContainer #mediaMovieIcon {
       border-radius: 15px;
@@ -225,7 +371,6 @@
 
 @media screen and (min-width: 750px) {
   .mediaContainer {
-    display: block;
     padding-bottom: 1px; }
     .mediaContainer #mediaMovieIcon {
       height: 220px;
@@ -240,7 +385,6 @@
 
 @media screen and (min-width: 1000px) {
   .mediaContainer {
-    display: block;
     width: 1000px;
     margin: 0 auto;
     padding-bottom: 1px; }
@@ -432,5 +576,6 @@
       margin: 1em 13%; }
 
 body {
-  margin: 0;
-  background-color: #000E2F; }
+  background-color: #000E2F;
+  background-color: #001951;
+  background-color: #0A1B41; }

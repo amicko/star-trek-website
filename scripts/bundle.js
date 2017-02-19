@@ -33021,144 +33021,215 @@ module.exports = require('./lib/React');
 }.call(this));
 
 },{}],171:[function(require,module,exports){
-"use strict";
+'use strict';
 
 var React = require('react');
 
 module.exports = React.createClass({
-	displayName: "exports",
+	displayName: 'exports',
 
+	getInitialState: function getInitialState() {
+		return {
+			currentImage: 0,
+			mediaCollage: [{
+				image: './images/ST-Original Series/tosCarousel.jpg',
+				url: '#/media/tos'
+			}, {
+				image: './images/ST-Next Generation/tngCarousel.jpg',
+				url: '#/media/tng'
+			}, {
+				image: './images/ST-Deep Space Nine/ds9Carousel.jpg',
+				url: '#/media/ds9'
+			}, {
+				image: './images/ST-Voyager/voyCarousel.jpg',
+				url: '#/media/voy'
+			}],
+			loreCollage: [{
+				image: './images/technology/TechCollage.jpg',
+				url: '#/lore/technology'
+			}, {
+				image: './images/affiliations/LogoCollage.jpg',
+				url: '#/lore/affiliation'
+			}, {
+				image: './images/starships/ShipCollage.jpg',
+				url: '#/lore/starship'
+			}, {
+				image: './images/locations/LocCollage.jpg',
+				url: '#/lore/location'
+			}]
+		};
+	},
+	componentDidMount: function componentDidMount() {
+		var that = this;
+		var loreInterval = setInterval(loreInt, 5000);
+
+		function loreInt() {
+			var oldImage = that.state.currentImage;
+			if (window.location.href != 'http://localhost:8000/#') {
+				clearInterval(loreInterval);
+			} else if (that.state.currentImage === 3) {
+				that.setState({
+					currentImage: 0
+				});
+			} else {
+				that.setState({
+					currentImage: oldImage + 1
+				});
+			}
+		};
+	},
 	render: function render() {
+		var loreCollageMap = this.state.loreCollage.map(function (collage, index) {
+			return React.createElement(
+				'div',
+				{ className: 'loreCollageCarousel', key: index },
+				React.createElement('img', { src: collage.image })
+			);
+		});
+
+		var mediaCollageMap = this.state.mediaCollage.map(function (collage, index) {
+			return React.createElement(
+				'div',
+				{ className: 'loreCollageCarousel', key: index },
+				React.createElement('img', { src: collage.image })
+			);
+		});
+
+		var currentCard = this.state.currentImage;
+
 		return React.createElement(
-			"div",
-			{ className: "homeContainer" },
+			'div',
+			{ className: 'homeContainer' },
 			React.createElement(
-				"section",
-				{ id: "homeIntroduction" },
+				'section',
+				{ id: 'homeIntroduction' },
 				React.createElement(
-					"h2",
-					null,
-					"Introduction"
-				),
-				React.createElement(
-					"p",
-					null,
-					"Welcome to Memory Alpha, a fan site designed to help newcomers to the Star Trek universe. This site is designed with all fans in mind, but with an eye for the newest."
-				),
-				React.createElement(
-					"p",
-					null,
-					"To me, Star Trek is the goal post that humanity can set for itself. In the world portrayed there, we see a humanity without greed, or poverty. A future full of hope, and wonderful technological achievements as far as the eye can see. Star Trek is in many ways the utopia we can all aspire to, where every person strives to better themselves for the sake of their own improvement and the improvement of mankind as a whole. It is incredible, and I hope you will find your time here helpful in exploring the world of Star Trek for yourself."
-				),
-				React.createElement(
-					"ul",
+					'p',
 					null,
 					React.createElement(
-						"li",
+						'span',
+						{ className: 'quotes' },
+						'"'
+					),
+					'To me, Star Trek is the goal post that humanity can set for itself. Within it, we see a humanity without greed or poverty. We see a future full of hope and technological marvels. We see a future where people of all denominations may find solace and encouragement for a better tomorrow.  A Utopia worth aspiring to.',
+					React.createElement(
+						'span',
+						{ className: 'quotes' },
+						'"'
+					)
+				)
+			),
+			React.createElement(
+				'div',
+				{ id: 'carouselContainer' },
+				React.createElement(
+					'section',
+					{ id: 'homeMediaAdvert' },
+					React.createElement(
+						'h3',
 						null,
-						React.createElement(
-							"h3",
-							null,
-							"Media"
-						),
-						React.createElement(
-							"p",
-							null,
-							"In the Media area, you will find my top recommended lists for all the movies and series of Star Trek, for people who have never seen any or very little of what is available."
-						)
+						'Media'
 					),
 					React.createElement(
-						"li",
+						'a',
+						{ href: this.state.mediaCollage[this.state.currentImage].url },
+						mediaCollageMap[currentCard]
+					),
+					React.createElement(
+						'p',
 						null,
-						React.createElement(
-							"h3",
-							null,
-							"Lore"
-						),
-						React.createElement(
-							"p",
-							null,
-							"In the Lore area you will find a breakdown of the most common aspects of the Star Trek universe, from the technology the characters use, to the locations they use them in, to the starships to travel on to get there."
-						)
+						'The Media area provides viewing tips for newcomers to the Star Trek universe.'
 					)
 				),
 				React.createElement(
-					"p",
-					null,
-					"If you are interested in learning more about Star Trek from a more objective perspective, and with a much wider scope of information, I highly recommend you follow this link to Star Trek's primary wiki database, ",
+					'section',
+					{ id: 'homeLoreAdvert' },
 					React.createElement(
-						"a",
-						{ href: "http://memory-alpha.wikia.com/wiki/Portal:Main" },
-						"Memory Alpha"
+						'h3',
+						null,
+						'Lore'
 					),
-					"."
+					React.createElement(
+						'a',
+						{ href: this.state.loreCollage[this.state.currentImage].url },
+						loreCollageMap[currentCard]
+					),
+					React.createElement(
+						'p',
+						null,
+						'The Lore area provides basic information about the various things within the Star Trek universe.'
+					)
 				)
 			),
 			React.createElement(
-				"section",
-				{ id: "homeFranchiseHistory" },
+				'div',
+				{ id: 'informationContainer' },
 				React.createElement(
-					"h2",
-					null,
-					"Franchise History"
+					'section',
+					{ id: 'homeFranchiseHistory' },
+					React.createElement(
+						'h2',
+						null,
+						'Franchise History'
+					),
+					React.createElement(
+						'p',
+						null,
+						'Star Trek, as a franchise, has a long-lived and prosperous history. It is full of interesting information, as well as incredible stories of changed lives and new horizons for countless individuals. I won\'t get too in-depth into it all, as this is an opportunity for the new-comer to get an idea of what made Star Trek the franchise that has come to mean so much to so many people across the globe. However, if you are interested in learning more, please follow ',
+						React.createElement(
+							'a',
+							{ href: 'https://en.wikipedia.org/wiki/Star_Trek#History_and_production' },
+							'this link to Star Trek\'s wiki page'
+						),
+						'.'
+					)
 				),
 				React.createElement(
-					"p",
-					null,
-					"Star Trek, as a franchise, has a long-lived and prosperous history. It is full of interesting information, as well as incredible stories of changed lived and new horizons for countless individuals. I won't get too in-depth into it all, as this is an opportunity for the new-comer to get an idea of what made Star Trek the franchise that has come to mean so much to so many people across the globe. However, if you are interested in learning more, please follow ",
+					'section',
+					{ id: 'homePersonalHistory' },
 					React.createElement(
-						"a",
-						{ href: "https://en.wikipedia.org/wiki/Star_Trek#History_and_production" },
-						"this link to Star Trek's wiki page"
+						'h2',
+						null,
+						'Personal History'
 					),
-					"."
+					React.createElement(
+						'p',
+						null,
+						'My own personal experience with Star Trek started when I was just a little kid. My grandfather introduced me to the Original Series of Star Trek and guided me through each successive series. His bedroom was a treasure trove of Star Trek memorabilia, and it was always so exciting to explore his walls and bookshelves which were all covered with everything from autographed images, to models, to action figurines and prop replicas.'
+					),
+					React.createElement(
+						'p',
+						null,
+						'Star Trek is actually what initially got me interested in programming. My early online excursions introduced me to the world of chatting, and I found an incredible sci-fi chatroom community by the name of Outpost Ten Forward. Among many of the sites mechanics and features included the ability to access basic programming abilities in the chat itself. I loved that site and wanted to help contribute to it\'s further success, which is what led me to my early education in programming.'
+					)
 				)
 			),
 			React.createElement(
-				"section",
-				{ id: "homePersonalHistory" },
+				'footer',
+				{ id: 'homeFooter' },
 				React.createElement(
-					"h2",
+					'p',
 					null,
-					"Personal History"
+					'This site was created by Aaron Micko. Star Trek and all it\'s related subsidiaries are registered trademarks of Paramount Pictures Inc. This site is for non-commercial purposes only. Any misuse of copyright materials is purely accidental.'
 				),
 				React.createElement(
-					"p",
-					null,
-					"My own personal experience with Star Trek started when I was just a little kid. My grandfather introduced me to the Original Series of Star Trek and guided me through each successive series. His bedroom was a treasure trove of Star Trek memorabilia, and it was always so exciting to explore his walls and bookshelves which were all covered with everything from autographed images, to models, to action figurines and prop replicas."
-				),
-				React.createElement(
-					"p",
-					null,
-					"Star Trek is actually what initially got me interested in programming. My early online excursions introduced me to the world of chatting, and I found an incredible sci-fi chatroom community by the name of Outpost Ten Forward. Among many of the sites mechanics and features included the ability to access basic programming abilities in the chat itself. I loved that site and wanted to help contribute to it's further success, which is what led me to my early education in programming."
-				)
-			),
-			React.createElement(
-				"footer",
-				{ id: "homeFooter" },
-				React.createElement(
-					"p",
-					null,
-					"This site was created by Aaron Micko. Star Trek and all it's related subsidiaries are registered trademarks of Paramount Pictures Inc. This site is for non-commercial purposes only. Any misuse of copyright materials is purely accidental."
-				),
-				React.createElement(
-					"ul",
+					'ul',
 					null,
 					React.createElement(
-						"li",
+						'li',
 						null,
-						"Footer Stuff"
+						'Footer Stuff'
 					),
-					React.createElement("vr", null),
+					React.createElement('vr', null),
 					React.createElement(
-						"li",
+						'li',
 						null,
-						"Footer Stuff"
+						'Footer Stuff'
 					),
 					React.createElement(
-						"li",
+						'li',
 						null,
-						"Footer Stuff"
+						'Footer Stuff'
 					)
 				)
 			)
@@ -33179,11 +33250,13 @@ module.exports = React.createClass({
 			loreTechnology: [{
 				name: 'Transporters',
 				image: './images/technology/transporter.jpg',
-				description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vitae erat vel leo sollicitudin tempus vel vel dui. Aliquam id purus sit amet libero laoreet porttitor. Maecenas sit amet pulvinar velit, sit amet efficitur quam. Nunc tempus laoreet vulputate.'
+				description: 'The transporter is a device which instantaneously teleports or beams an organic or inorganic thing from one point to another by deconstructing the item on a molecular level and reassembling it at the destination. Transporters allow civilizations to transport supplies and people across great distances without ever having to manually ferry those things directly.',
+				link: 'http://memory-alpha.wikia.com/wiki/Transporter'
 			}, {
-				name: 'Warp Engines',
+				name: 'Warp Drive',
 				image: './images/technology/warp-core.jpg',
-				description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vitae erat vel leo sollicitudin tempus vel vel dui. Aliquam id purus sit amet libero laoreet porttitor. Maecenas sit amet pulvinar velit, sit amet efficitur quam. Nunc tempus laoreet vulputate. Vestibulum nibh est, laoreet eget dignissim eu, pretium id felis. Donec mattis orci ante, a vestibulum arcu eleifend eu. Integer tempus nibh et enim tempus sollicitudin.'
+				description: 'Nearly all starships in the Star Trek universe use some kind of warp-driven engine. It is the warp drive design that allows civilizations to go faster than the speed of light. They do this by generating a warp field that creates a bubble around the starship that allows them to essentially break the laws of physics by going faster than the speed of light.',
+				link: 'http://memory-alpha.wikia.com/wiki/Warp_drive'
 			}, {
 				name: 'Replicators',
 				image: './images/technology/replicator.jpg',
@@ -33314,6 +33387,9 @@ module.exports = React.createClass({
 			}]
 		};
 	},
+	componentDidMount: function componentDidMount() {
+		// window.location.reload(false);
+	},
 	render: function render() {
 		var newIndex = undefined;
 		var technologyMap = this.state.loreTechnology.map(function (technology, index) {
@@ -33333,6 +33409,18 @@ module.exports = React.createClass({
 					'p',
 					null,
 					technology.description
+				),
+				React.createElement('br', null),
+				React.createElement(
+					'p',
+					null,
+					'More information can be learned ',
+					React.createElement(
+						'a',
+						{ href: technology.link, target: '_blank' },
+						'here'
+					),
+					'.'
 				)
 			);
 		});
@@ -33480,7 +33568,6 @@ module.exports = React.createClass({
 		return {
 			testTran: 'testTranBoxStart',
 			currentCard: 0,
-			contBox: {},
 			mediaMOV: [{
 				movieName: 'Movie One',
 				movieSummary: 'Words words words words',
@@ -33986,21 +34073,19 @@ module.exports = React.createClass({
 
 		return React.createElement(
 			'div',
-			{ style: this.state.contBox, id: 'mediaCategoryContainer' },
+			{ id: 'mediaCategoryContainer' },
 			shownList[this.state.currentCard]
 		);
 	},
 	onNext: function onNext(e, currentCard) {
 		this.setState({
-			currentCard: currentCard + 1,
-			contBox: {}
+			currentCard: currentCard + 1
 		});
 		// if(this.state.testTran === 'testTranBoxFinish') {
 		// 	this.setState({
 		// 		testTran: 'testTranBoxStart'
 		// 	})
 		// }
-		// testTran: 'testTranBoxFinish'
 		if (this.props.mediaCategory === 'mov' && currentCard == this.state.mediaMOV.length - 1) {
 			this.setState({
 				currentCard: 0
@@ -34192,7 +34277,7 @@ var Router = Backbone.Router.extend({
 	},
 	home: function home() {
 		ReactDOM.render(React.createElement(NavComponent, { router: this }), nav);
-		ReactDOM.render(React.createElement(HomeComponent, { router: this }), main);
+		ReactDOM.render(React.createElement(HomeComponent, { home: 'home', router: this }), main);
 	},
 	media: function media() {
 		ReactDOM.render(React.createElement(NavComponent, { router: this }), nav);
