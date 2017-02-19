@@ -33065,7 +33065,7 @@ module.exports = React.createClass({
 
 		function loreInt() {
 			var oldImage = that.state.currentImage;
-			if (window.location.href != 'http://localhost:8000/#') {
+			if (window.location.href != 'http://localhost:8000/#' && window.location.href != 'http://localhost:8000/' && window.location.href != 'http://amicko.github.io/star-trek-website/' && window.location.href != 'http://amicko.github.io/star-trek-website/#') {
 				clearInterval(loreInterval);
 			} else if (that.state.currentImage === 3) {
 				that.setState({
