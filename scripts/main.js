@@ -24,7 +24,7 @@ const Router = Backbone.Router.extend({
 	},
 	home: function() {
 		ReactDOM.render(<NavComponent router={this}/>, nav)
-		ReactDOM.render(<HomeComponent router={this}/>, main)
+		ReactDOM.render(<HomeComponent home="home" router={this}/>, main)
 	},
 	media: function() {
 		ReactDOM.render(<NavComponent router={this}/>, nav)
