@@ -3,15 +3,59 @@
 	padding: 1em;
 	background-image: radial-gradient(ellipse, #ffffff 0%, #B7B8BA 65%, #737C92 85%);
 
-	a {
-		display: block;
-		text-align: center;
+	.loreBlock {
 		margin: 0 auto;
-		text-decoration: none;
-	}
+		width: 100%;
+		display: inline-block;
+		margin-bottom: -0.5em;
 
-	a:hover {
-		font-weight: bold;
-		color: black;
+		a {
+			margin: 0.5em auto;
+			text-align: center;
+			display: block;
+			text-decoration: none;
+		}
+
+		img {
+			width: 100%;
+			border: 1px solid transparent;
+			border-radius: 15px;
+		}
+	}
+}
+
+@media screen and (min-width: 550px) {
+	#loreContainer {
+
+
+		.loreBlock {
+
+
+			a {
+
+			}
+
+			img {
+
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 700px) {
+	#loreContainer {
+
+		.loreBlock {
+
+			a {
+				display: inline-block;
+				width: 45%;
+				margin: 0.5em 0.5em;
+			}
+
+			img {
+
+			}
+		}
 	}
 }
