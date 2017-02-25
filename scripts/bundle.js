@@ -33535,12 +33535,12 @@ module.exports = React.createClass({
 				React.createElement(
 					"a",
 					{ href: "#/lore/technology" },
-					React.createElement("img", { src: "./images/technology/techCollage.jpg" })
+					React.createElement("img", { src: "./images/technology/TechCollage.jpg" })
 				),
 				React.createElement(
 					"a",
 					{ href: "#/lore/affiliation" },
-					React.createElement("img", { src: "./images/affiliations/logoCollage.jpg" })
+					React.createElement("img", { src: "./images/affiliations/LogoCollage.jpg" })
 				)
 			),
 			React.createElement(
@@ -33549,7 +33549,7 @@ module.exports = React.createClass({
 				React.createElement(
 					"a",
 					{ href: "#/lore/starship" },
-					React.createElement("img", { src: "./images/starships/shipCollage.jpg" })
+					React.createElement("img", { src: "./images/starships/ShipCollage.jpg" })
 				),
 				React.createElement(
 					"a",
