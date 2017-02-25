@@ -509,14 +509,26 @@
   margin-top: 1em;
   padding: 1em;
   background-image: radial-gradient(ellipse, #ffffff 0%, #B7B8BA 65%, #737C92 85%); }
-  #loreContainer a {
-    display: block;
-    text-align: center;
+  #loreContainer .loreBlock {
     margin: 0 auto;
-    text-decoration: none; }
-  #loreContainer a:hover {
-    font-weight: bold;
-    color: black; }
+    width: 100%;
+    display: inline-block;
+    margin-bottom: -0.5em; }
+    #loreContainer .loreBlock a {
+      margin: 0.5em auto;
+      text-align: center;
+      display: block;
+      text-decoration: none; }
+    #loreContainer .loreBlock img {
+      width: 100%;
+      border: 1px solid transparent;
+      border-radius: 15px; }
+
+@media screen and (min-width: 700px) {
+  #loreContainer .loreBlock a {
+    display: inline-block;
+    width: 45%;
+    margin: 0.5em 0.5em; } }
 
 #loreCategoryContainer {
   margin-top: 1em;

@@ -33530,27 +33530,32 @@ module.exports = React.createClass({
 				"This is the future home of the lore page! You will find all the information a new-comer to Star Trek will need to learn about the various aspects of Star Trek. From the Galor-Class cruisers of the fascist-state Cardassians to the politically manipulative planetary history of the Romulan capitol of Romulus, you will find it all in one of the following categories."
 			),
 			React.createElement(
-				"a",
-				{ href: "#/lore/technology" },
-				"TECHNOLOGY"
+				"div",
+				{ className: "loreBlock" },
+				React.createElement(
+					"a",
+					{ href: "#/lore/technology" },
+					React.createElement("img", { src: "./images/technology/techCollage.jpg" })
+				),
+				React.createElement(
+					"a",
+					{ href: "#/lore/affiliation" },
+					React.createElement("img", { src: "./images/affiliations/logoCollage.jpg" })
+				)
 			),
-			React.createElement("br", null),
 			React.createElement(
-				"a",
-				{ href: "#/lore/affiliation" },
-				"AFFILIATIONS"
-			),
-			React.createElement("br", null),
-			React.createElement(
-				"a",
-				{ href: "#/lore/starship" },
-				"STARSHIPS"
-			),
-			React.createElement("br", null),
-			React.createElement(
-				"a",
-				{ href: "#/lore/location" },
-				"LOCATIONS"
+				"div",
+				{ className: "loreBlock" },
+				React.createElement(
+					"a",
+					{ href: "#/lore/starship" },
+					React.createElement("img", { src: "./images/starships/shipCollage.jpg" })
+				),
+				React.createElement(
+					"a",
+					{ href: "#/lore/location" },
+					React.createElement("img", { src: "./images/locations/LocCollage.jpg" })
+				)
 			)
 		);
 	}
